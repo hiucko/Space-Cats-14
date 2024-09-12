@@ -25,3 +25,20 @@
           reagents:
             - ReagentId: Cryptobiolin
               Quantity: 20
+              
+﻿- type: entity
+  name: витамишка
+  parent: Pill
+  id: PillVitamishki
+  description: не более двух штук в день!
+  components:
+    - type: Sprite
+      sprite: _SpaceCats/Objects/Specific/Chemistry/Pills.rsi
+      state: vitamishki
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+            - ReagentId: Vitamin
+              Quantity: 20
