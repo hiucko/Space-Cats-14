@@ -18,16 +18,16 @@
         - !type:ReagentThreshold
           min: 10
         damage:
-          types:
-            Poison: 4
+          groups:
+            Toxin: 4
             Brute: -6
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
           min: 30
         damage:
-          types:
-            Poison: 6
+          groups:
+            Toxin: 6
             Brute: -1
       - !type:ModifyBleedAmount
         amount: -0.25
