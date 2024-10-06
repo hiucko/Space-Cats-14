@@ -197,7 +197,7 @@
   reactants:
     Ephedrine:
       amount: 1
-    PainKillerUltra:
+    PainKillUltra:
       amount: 1
   products:
    Noozine: 1
@@ -208,7 +208,7 @@
   reactants:
     Epinephrine:
       amount: 1
-    PainKillerUltra:
+    PainKillUltra:
       amount: 1
   products:
    Noozine: 1
@@ -219,7 +219,7 @@
   reactants:
     Desoxyephedrine:
       amount: 1
-    PainKillerUltra:
+    PainKillUltra:
       amount: 1
   products:
    Noozine: 1
