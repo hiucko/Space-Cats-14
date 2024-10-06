@@ -37,7 +37,7 @@
   reactants:
     SpaceDrugs:
       amount: 1
-    Bicadirine:
+    Bicaridine:
       amount: 1
     Milk:
       amount: 1
@@ -85,7 +85,7 @@
   reactants:
     Dirozine:
       amount: 1
-    Dilovene:
+    Dylovene:
       amount: 1
   products:
     Tricordrazine: 1 
