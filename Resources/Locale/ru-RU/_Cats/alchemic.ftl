@@ -10,4 +10,3 @@ psychicalDesc-reagent-killcool = убийственно круто
 reagent-noozine = Ноозин
 reagent-noozine-desc = Мощный токсин,полученный смешиванием не самых лучших веществ. Вызывает стремительную остановку сердца.
 psychicalDesc-reagent-death = смертельно
-reagent-flavor-death = смертельно

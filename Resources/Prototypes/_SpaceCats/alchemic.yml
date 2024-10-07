@@ -169,7 +169,7 @@
   group: Medicine
   desc: reagent-noozine-desc
   physicalDesc: psychicalDesc-reagent-death
-  flavor: reagent-flavor-death
+  flavor: medicine
   color: "#f19cbb"
   metabolisms:
     Poison:
