@@ -1,9 +1,9 @@
 - type: reagent
   id: Meridine
-  name: Меридин
+  name: reagent-meridine
   group: Medicine
-  desc: Производный анальгетик от бикадирина,обладающий возможностью восстанавливать кости ценой небольшого отравления пользователя. При незначительной передозировке лечит все виды механических повреждений вдвое эффективнее,но отравляет пользователя. Не рекомендуется смешивать с пунктуразом!
-  physicalDesc: кроваво-красно
+  desc: reagent-meridine-desc
+  physicalDesc: psychicalDesc-reagent-red
   flavor: medicine
   color: "#ff8680"
   metabolisms:
@@ -57,10 +57,10 @@
 
 - type: reagent
   id: Dirozine
-  name: Дирозин
+  name: reagent-dirozine
   group: Medicine
-  desc: Модификация молекулы трикордразина кремнием и калием привела к появлению дирозина. Стимулирует организм на ускоренную регенерацию,но вызывает небольшую потерю крови и отравление.
-  physicalDesc: серебристо
+  desc: reagent-dirozine-desc
+  physicalDesc: psychicalDesc-reagent-silver
   flavor: medicine
   color: "#d9d9d9"
   metabolisms:
@@ -105,10 +105,10 @@
 
 - type: reagent
   id: PainKillUltra
-  name: коктейль "Убийца боли"
+  name: reagent-painkillultra
   group: Medicine
-  desc: Боевой коктейль,повышающий боевые способности применившего,вызывая незначительные нарушения в генетическом коде. Ни в коем случае не смешивайте с фалангимином!
-  physicalDesc: убийственно круто
+  desc: reagent-painkillultra-desc
+  physicalDesc: psychicalDesc-reagent-killcool
   flavor: medicine
   color: "#f80000"
   metabolisms:
@@ -120,10 +120,10 @@
           groups:
             Brute: -3
           types:
-            Cellular: 1.5 # При смешивании с фалангимином создаст ноозин. - мощный токсин,вызывающий остановку сердца и потерю крови
+            Cellular: 1.5 # При смешивании с фалангимином создаст ноозин. - мощный токсин,вызывающий остановку сердца
             Heat: -2.5
-            Poison: -2.5
-            Bloodloss: -2.5
+            Poison: -2
+            Bloodloss: -3
       - !type:GenericStatusEffect
         key: Adrenaline # убирает боль(позволит эффективнее сражаться.)
         component: IgnoreSlowOnDamage
@@ -165,11 +165,11 @@
 
 - type: reagent
   id: Noozine
-  name: Ноозин
+  name: reagent-noozine
   group: Medicine
-  desc: Сильный токсин,полученный смешиванием не самых сочетаемых веществ. При введении вызывает остановку сердца.
-  physicalDesc: смертельно
-  flavor: смертельно
+  desc: reagent-noozine-desc
+  physicalDesc: psychicalDesc-reagent-death
+  flavor: reagent-flavor-death
   color: "#f19cbb"
   metabolisms:
     Poison:
