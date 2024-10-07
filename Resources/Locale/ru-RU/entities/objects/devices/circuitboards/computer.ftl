@@ -16,9 +16,6 @@ ent-StationGateway = врата
 ent-GatewayChipBlank = чип врат
     .desc = Чип с сохраненными данными о портальных воротах. Вставьте его в консоль управления воротами, чтобы иметь возможность управлять ими.
 
-ent-GatewayChipBlank = { ent-GatewayChipBlank }
-    .desc = { ent-GatewayChipBlank.desc }
-
 ent-GatewayChipSalvage = { ent-GatewayChipBlank }
     .desc = { ent-GatewayChipBlank.desc }
 
