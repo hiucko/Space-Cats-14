@@ -97,8 +97,8 @@
       - id: RegenerativeMesh
       - id: SyringeEphedrine
       - id: SyringeSaline
-      - id: BruteAutoInjector
-      - id: BurnAutoInjector
+      - id: ReliableContainerBruteFilled  # cats
+      - id: ReliableContainerBurnFilled   # cats
 
 - type: entity
   id: StimkitFilled
