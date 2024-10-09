@@ -359,15 +359,34 @@
 - type: entity
   name: aloe cream
   description: A topical cream for burns.
-  parent: Ointment ##Yes it's a direct reskin
   id: AloeCream
   components:
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/aloe.rsi
     state: cream
+  - type: Item
+    heldPrefix: ointment
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Heat: -5
+        Cold: -5
+        Shock: -5
+        Caustic: -1.5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
   - type: Stack
-    stackType: AloeCream
+    stackType: Ointment
     count: 10
+  - type: Tag
+    tags:
+    - Ointment
+  - type: StackPrice
+    price: 5
 
 - type: entity
   parent: BaseHealingItem
