@@ -88,7 +88,7 @@
     Dylovene:
       amount: 1
   products:
-    Tricordrazine: 1 
+    Tricordrazine: 1
 
 - type: reaction
   id: Dirozine
@@ -120,7 +120,7 @@
           groups:
             Brute: -3
           types:
-            Cellular: 1.5 # При смешивании с фалангимином создаст ноозин. - мощный токсин,вызывающий остановку сердца
+            Cellular: 0.75 # При смешивании с фалангимином создаст ноозин. - мощный токсин,вызывающий остановку сердца
             Heat: -2.5
             Poison: -2
             Bloodloss: -3
@@ -178,7 +178,7 @@
         conditions:
         damage:
           groups:
-            Airloss: 2.5
+            Airloss: 10
 
 - type: reaction
   id: PainPhalanx
@@ -223,3 +223,150 @@
       amount: 1
   products:
    Noozine: 1
+
+# часть два.
+- type: reagent
+  id: Sufentanil #для медиков ОБР,бригмедика и экстренных наборов СБ
+  name: reagent-sufentanil
+  group: Medicine
+  desc: reagent-sufentanil-desc
+  physicalDesc: reagent-psychicalDesc-sufentanil
+  flavor: medicine
+  color: "#f80000"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Critical
+        - !type:ReagentThreshold
+          min: 0
+          max: 20
+        damage:
+          groups:
+            Brute: -4
+            Airloss: -4
+          types:
+            Heat: -2
+            Poison: -2
+            Bloodloss: -4
+      - !type:Drunk # побочка
+        boozePower: 5
+      - !type:ModifyBleedAmount
+        amount: -0.25
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 3
+        refresh: false
+      - !type:GenericStatusEffect
+        key: PressureImmunity
+        component: PressureImmunity
+      - !type:GenericStatusEffect
+        key: Adrenaline # убирает боль(позволит эффективнее сражаться.)
+        component: IgnoreSlowOnDamage
+        time: 60 # суфентанил-мощный опиоидный анальгетик. Глушит боль надолго.
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        damage:
+          types:
+            Asphyxiation: 0.5
+            Poison: 1.5
+
+- type: reaction
+  id: Sufentanil
+  impact: Medium
+  minTemp: 380
+  reactants:
+    Epinephrine:
+      amount: 1
+    SpaceDrugs:
+      amount: 1
+    Bicadirine:
+      amount: 1
+    Dirozine:
+      amount: 1
+  products:
+    Sufentanil: 4
+
+- type: reagent
+  id: Tramadol #пиразин,но на механический урон
+  name: reagent-tramadol
+  group: Medicine
+  desc: reagent-tramadol-desc
+  physicalDesc: reagent-psychicalDesc-tramadol
+  flavor: medicine
+  color: "#f80000"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.1
+      effects:
+      - !type:HealthChange
+        conditions:
+        damage:
+          groups:
+            Brute: -0.5
+          types:
+            Bloodloss: -0.5
+      - !type:Drunk # побочка
+        boozePower: 5
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 3
+        refresh: false
+      - !type:GenericStatusEffect
+        key: Adrenaline # убирает боль(позволит эффективнее сражаться.)
+        component: IgnoreSlowOnDamage
+        time: 2.5 # трамадол должен убирать боль и медленно лечить мех. урон.
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        damage:
+          types:
+            Asphyxiation: 0.5
+            Poison: 1
+      - !type:ModifyBleedAmount
+        amount: -0.25
+
+- type: reaction
+  id: Tramadol #долгое,но эффективное лечение
+  impact: Medium
+  minTemp: 450
+  reactants:
+    SpaceDrugs:
+      amount: 1
+    Bicadirine:
+      amount: 1
+  products:
+    Tramadol: 4
+
+- type: reagent
+  id: Nanomachines #лечат долго и медленно.
+  name: reagent-nanomachines
+  group: Medicine
+  desc: reagent-nanomachines-desc
+  physicalDesc: reagent-psychicalDesc-nanomachines
+  flavor: metallic
+  color: "#f80000"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.001
+      effects:
+      - !type:HealthChange
+        conditions:
+        damage:
+          groups:
+            Brute: -0.3
+            Toxin: -0.2
+          types:
+            Heat: -0.2
+            Bloodloss: 0.2
+      - !type:ModifyBleedAmount
+        amount: -0.5
