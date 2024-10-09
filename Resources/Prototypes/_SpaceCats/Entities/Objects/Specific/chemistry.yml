@@ -72,9 +72,9 @@
         maxVol: 50
         reagents:
         - ReagentId: Bicaridine
-          Quantity: 35
+          Quantity: 75
         - ReagentId: TranexamicAcid
-          Quantity: 15
+          Quantity: 25
 
 - type: entity
   name: burn reliable container 
@@ -85,9 +85,11 @@
   - type: SolutionContainerManager
     solutions:
       beaker:
-        maxVol: 50
+        maxVol: 100
         reagents:
         - ReagentId: Dermaline
-          Quantity: 25
+          Quantity: 50
         - ReagentId: Leporazine
           Quantity: 25
+        - ReagentId: Tricordrazine
+          Quantity:  25
