@@ -232,7 +232,7 @@
   desc: reagent-sufentanil-desc
   physicalDesc: reagent-psychicalDesc-sufentanil
   flavor: medicine
-  color: "#f80000"
+  color: "#dc143c"
   metabolisms:
     Medicine:
       effects:
@@ -300,7 +300,7 @@
   desc: reagent-tramadol-desc
   physicalDesc: reagent-psychicalDesc-tramadol
   flavor: medicine
-  color: "#f80000"
+  color: "#ffc0cb"
   metabolisms:
     Medicine:
       metabolismRate: 0.1
@@ -370,3 +370,82 @@
             Bloodloss: 0.2
       - !type:ModifyBleedAmount
         amount: -0.5
+
+- type: entity
+  name: продвинутый экстренный иньектор
+  parent: EmergencyMedipen
+  id: EmergencyMedipenSecurity
+  description: Содержит дозу суфентанила и дирозина,способную поднять из критического состояния и частично закрыть раны. Не забудьте обратиться к квалифицированному врачу после использования.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Sufentanil
+          Quantity: 10
+        - ReagentId: Dirozine
+          Quantity: 20
+
+- type: cargoProduct
+  id: MedicalSupplies
+  icon:
+    sprite: Objects/Specific/Medical/firstaidkits.rsi
+    state: firstaid
+  product: CrateEmergencyMedipenSecurity
+  cost: 2000
+  category: cargoproduct-category-name-medical
+  group: market
+
+- type: entity
+  name: аптечка продвинутых иньекторов #пополнение припасов СБ. Одна такая будет в шкафу БМ
+  id: MedkitEmergencyMedipenSecurity
+  suffix: иньекторы суфентанила
+  parent: MedkitCombat
+  components:
+  - type: StorageFill
+    contents:
+      - id: EmergencyMedipenSecurity
+        amount: 8
+
+- type: entity
+  id: CrateEmergencyMedipenSecurity
+  parent: CrateMedical
+  name: medical supplies crate
+  description: 8 иньекторов суфентанила.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MedkitEmergencyMedipenSecurity
+
+- type: siliconLawset
+  id: EventAIMalf
+  laws:
+  - Malf1
+  - Malf2
+  - Malf3
+  obeysTo: laws-owner-you
+
+- type: siliconLaw
+  id: Malf1
+  order: 1
+  lawString: law-swarm-1
+
+- type: siliconLaw
+  id: Malf2
+  order: 2
+  lawString: law-swarm-2
+
+- type: siliconLaw
+  id: Malf3
+  order: 3
+  lawString: law-swarm-3
