@@ -245,7 +245,7 @@
           max: 20
         damage:
           groups:
-            Brute: -4
+            Brute: -3
             Airloss: -4
           types:
             Heat: -2
