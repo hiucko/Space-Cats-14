@@ -45,14 +45,13 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ActorSystem _actors = default!;
-    [Dependency] private readonly ArrivalsSystem _arrivalsSystem = default!;
-    [Dependency] private readonly ContainerSpawnPointSystem _containerSpawnPointSystem = default!;
     [Dependency] private readonly HumanoidAppearanceSystem _humanoidSystem = default!;
     [Dependency] private readonly IdCardSystem _cardSystem = default!;
     [Dependency] private readonly IdentitySystem _identity = default!;
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
     [Dependency] private readonly PdaSystem _pdaSystem = default!;
     [Dependency] private readonly SharedAccessSystem _accessSystem = default!;
+    [Dependency] private readonly SharedJobSystem _jobSystem = default!;
 
     private bool _randomizeCharacters;
 
@@ -235,6 +234,13 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         _cardSystem.TryChangeFullName(cardId, characterName, card);
         _cardSystem.TryChangeJobTitle(cardId, jobPrototype.LocalizedName, card);
 
+        var color = jobPrototype.Color is not null ? jobPrototype.Color
+					: _jobSystem.TryGetDepartment(jobPrototype.ID, out var department) ? department.Color 
+					: null;
+
+		if (color is not null)
+			_cardSystem.TryChangeColor(cardId, color);
+
         if (_prototypeManager.TryIndex(jobPrototype.Icon, out var jobIcon))
             _cardSystem.TryChangeJobIcon(cardId, jobIcon, card);
 
@@ -248,7 +254,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         _accessSystem.SetAccessToJob(cardId, jobPrototype, extendedAccess);
 
         if (pdaComponent != null)
-            _pdaSystem.SetOwner(idUid.Value, pdaComponent, characterName);
+            _pdaSystem.SetOwner(idUid.Value, pdaComponent, entity, characterName);
     }
 
 

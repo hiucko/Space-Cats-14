@@ -2,7 +2,7 @@
   id: Bagel
   mapName: 'Bagel Station'
   mapPath: /Maps/bagel.yml
-  minPlayers: 10
+  minPlayers: 5
   stations:
     Bagel:
       stationProto: StandardNanotrasenStation
@@ -67,4 +67,4 @@
             Prisoner: [ 2, 3]
             #silicon
             StationAi: [ 1, 1 ]
-            Borg: [ 4, 4 ]
+            Borg: [ 2, 2 ]

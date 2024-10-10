@@ -5,6 +5,9 @@ using Content.Server.DeviceNetwork.Components;
 using Content.Server.Instruments;
 using Content.Server.Light.EntitySystems;
 using Content.Server.PDA.Ringer;
+using Content.Server.RoundEnd;
+using Content.Server.Shuttles.Components;
+using Content.Server.Shuttles.Systems;
 using Content.Server.Station.Systems;
 using Content.Server.Store.Components;
 using Content.Server.Store.Systems;
@@ -19,9 +22,12 @@ using Content.Shared.PDA;
 using Content.Shared.Store.Components;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
+using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
+using Content.Shared.CCVar;
+using Robust.Shared.Timing;
 
 namespace Content.Server.PDA
 {
@@ -36,6 +42,9 @@ namespace Content.Server.PDA
         [Dependency] private readonly UserInterfaceSystem _ui = default!;
         [Dependency] private readonly UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
         [Dependency] private readonly ContainerSystem _containerSystem = default!;
+        [Dependency] private readonly RoundEndSystem _roundEndSystem = default!;
+        [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttleSystem = default!;
+        [Dependency] private readonly IGameTiming _gameTiming = default!;
 
         public override void Initialize()
         {
@@ -55,7 +64,21 @@ namespace Content.Server.PDA
             SubscribeLocalEvent<PdaComponent, CartridgeLoaderNotificationSentEvent>(OnNotification);
 
             SubscribeLocalEvent<StationRenamedEvent>(OnStationRenamed);
+            SubscribeLocalEvent<EntityRenamedEvent>(OnEntityRenamed);
             SubscribeLocalEvent<AlertLevelChangedEvent>(OnAlertLevelChanged);
+        }
+
+        private void OnEntityRenamed(ref EntityRenamedEvent ev)
+        {
+            var query = EntityQueryEnumerator<PdaComponent>();
+
+            while (query.MoveNext(out var uid, out var comp))
+            {
+                if (comp.PdaOwner == ev.Uid)
+                {
+                    SetOwner(uid, comp, ev.Uid, ev.NewName);
+                }
+            }
         }
 
         protected override void OnComponentInit(EntityUid uid, PdaComponent pda, ComponentInit args)
@@ -67,6 +90,7 @@ namespace Content.Server.PDA
 
             UpdateAlertLevel(uid, pda);
             UpdateStationName(uid, pda);
+            UpdateEvacShuttle(uid, pda);
         }
 
         protected override void OnItemInserted(EntityUid uid, PdaComponent pda, EntInsertedIntoContainerMessage args)
@@ -94,9 +118,10 @@ namespace Content.Server.PDA
             UpdatePdaUi(uid, pda);
         }
 
-        public void SetOwner(EntityUid uid, PdaComponent pda, string ownerName)
+        public void SetOwner(EntityUid uid, PdaComponent pda, EntityUid owner, string ownerName)
         {
             pda.OwnerName = ownerName;
+            pda.PdaOwner = owner;
             UpdatePdaUi(uid, pda);
         }
 
@@ -112,7 +137,7 @@ namespace Content.Server.PDA
 
         private void UpdateAllPdaUisOnStation()
         {
-            var query = EntityQueryEnumerator<PdaComponent>();
+            var query = AllEntityQuery<PdaComponent>();
             while (query.MoveNext(out var ent, out var comp))
             {
                 UpdatePdaUi(ent, comp);
@@ -158,6 +183,7 @@ namespace Content.Server.PDA
 
             UpdateStationName(uid, pda);
             UpdateAlertLevel(uid, pda);
+            UpdateEvacShuttle(uid, pda);
             // TODO: Update the level and name of the station with each call to UpdatePdaUi is only needed for latejoin players.
             // TODO: If someone can implement changing the level and name of the station when changing the PDA grid, this can be removed.
 
@@ -179,7 +205,9 @@ namespace Content.Server.PDA
                     IdOwner = id?.FullName,
                     JobTitle = id?.JobTitle,
                     StationAlertLevel = pda.StationAlertLevel,
-                    StationAlertColor = pda.StationAlertColor
+                    StationAlertColor = pda.StationAlertColor,
+                    EvacShuttleStatus = pda.ShuttleStatus,
+                    EvacShuttleTime = pda.ShuttleTime
                 },
                 pda.StationName,
                 showUplink,
@@ -265,6 +293,38 @@ namespace Content.Server.PDA
             var station = _station.GetOwningStation(uid);
             pda.StationName = station is null ? null : Name(station.Value);
         }
+
+        // cats-start
+        private void UpdateEvacShuttle(EntityUid uid, PdaComponent pda)
+        {
+            TimeSpan? shuttleTime;
+            EvacShuttleStatus shuttleStatus;
+            if (_emergencyShuttleSystem.EmergencyShuttleArrived)
+            {
+                shuttleTime = _gameTiming.CurTime + TimeSpan.FromSeconds(_emergencyShuttleSystem.СonsoleAccumulator);
+                shuttleStatus = EvacShuttleStatus.WaitingToLaunch;
+            }
+            else
+            {
+                if (_roundEndSystem.ExpectedCountdownEnd != null)
+                {
+                    shuttleTime = _roundEndSystem.ExpectedCountdownEnd;
+                    shuttleStatus = EvacShuttleStatus.WaitingToArrival;
+                }
+                else
+                {
+                    shuttleTime = _roundEndSystem.TimeToCallShuttle();
+                    shuttleStatus = EvacShuttleStatus.WaitingToCall;
+                }
+            }
+            var station = _station.GetOwningStation(uid);
+            if (!TryComp<StationEmergencyShuttleComponent>(station, out var stationEmergencyShuttleComponent))
+                return;
+
+            pda.ShuttleStatus = shuttleStatus;
+            pda.ShuttleTime = shuttleTime;
+        }
+        // cats-end
 
         private void UpdateAlertLevel(EntityUid uid, PdaComponent pda)
         {

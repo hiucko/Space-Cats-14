@@ -1,12 +1,10 @@
-using System.Globalization;
-using Content.Server.Access.Systems;
 using Content.Server.Administration.Logs;
 using Content.Server.AlertLevel;
 using Content.Server.Chat.Systems;
-using Content.Server.DeviceNetwork;
 using Content.Server.DeviceNetwork.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Interaction;
+using Content.Server.Pinpointer;
 using Content.Server.Popups;
 using Content.Server.RoundEnd;
 using Content.Server.Screens.Components;
@@ -20,28 +18,28 @@ using Content.Shared.Communications;
 using Content.Shared.Database;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.Emag.Components;
+using Content.Shared.IdentityManagement;
 using Content.Shared.Popups;
-using Content.Shared.Silicons.Borgs.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
+using Robust.Shared.Utility;
 
 namespace Content.Server.Communications
 {
     public sealed class CommunicationsConsoleSystem : EntitySystem
     {
         [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
-        [Dependency] private readonly InteractionSystem _interaction = default!;
         [Dependency] private readonly AlertLevelSystem _alertLevelSystem = default!;
         [Dependency] private readonly ChatSystem _chatSystem = default!;
         [Dependency] private readonly DeviceNetworkSystem _deviceNetworkSystem = default!;
         [Dependency] private readonly EmergencyShuttleSystem _emergency = default!;
-        [Dependency] private readonly IdCardSystem _idCardSystem = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly RoundEndSystem _roundEndSystem = default!;
         [Dependency] private readonly StationSystem _stationSystem = default!;
         [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+        [Dependency] private readonly NavMapSystem _navMap = default!;
 
         private const float UIUpdateInterval = 5.0f;
 
@@ -237,7 +235,6 @@ namespace Content.Server.Communications
         {
             var maxLength = _cfg.GetCVar(CCVars.ChatMaxAnnouncementLength);
             var msg = SharedChatSystem.SanitizeAnnouncement(message.Message, maxLength);
-            var author = Loc.GetString("comms-console-announcement-unknown-sender");
             if (message.Actor is { Valid: true } mob)
             {
                 if (!CanAnnounce(comp))
@@ -252,7 +249,7 @@ namespace Content.Server.Communications
                 }
 
                 // User has an id
-                if (_idCardSystem.TryFindIdCard(mob, out var id))
+                /*if (_idCardSystem.TryFindIdCard(mob, out var id))
                 {
                     author = $"{id.Comp.FullName} ({CultureInfo.CurrentCulture.TextInfo.ToTitleCase(id.Comp.JobTitle ?? string.Empty)})".Trim();
                 }
@@ -263,6 +260,17 @@ namespace Content.Server.Communications
                     )
                 {
                     author = Name(mob).Trim();
+                }*/
+                var tryGetIdentityShortInfoEvent = new TryGetIdentityShortInfoEvent(uid, mob);
+                RaiseLocalEvent(tryGetIdentityShortInfoEvent);
+                var author = tryGetIdentityShortInfoEvent.Title ?? Loc.GetString("comms-console-announcement-unknown-sender");
+                if (comp.ShowLocation == true)
+                {
+                    msg += "\n" + Loc.GetString("comms-console-announcement-sent-by-with-location", ("author", author), ("location", FormattedMessage.RemoveMarkupOrThrow(_navMap.GetNearestBeaconString((uid, null)))));
+                }
+                else
+                {
+                    msg += "\n" + Loc.GetString("comms-console-announcement-sent-by", ("author", author));
                 }
             }
 
@@ -276,7 +284,6 @@ namespace Content.Server.Communications
             Loc.TryGetString(comp.Title, out var title);
             title ??= comp.Title;
 
-            msg += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author;
             if (comp.Global)
             {
                 _chatSystem.DispatchGlobalAnnouncement(msg, title, announcementSound: comp.Sound, colorOverride: comp.Color);

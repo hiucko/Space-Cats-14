@@ -11,7 +11,7 @@
   cost: 7500
   recipeUnlocks:
   - MiningDrill
-  - WeaponGrapplingGun
+  - MineralScannerEmpty
   - BorgModuleMining
   - BorgModuleGrapplingGun
   - OreProcessorIndustrialMachineCircuitboard
@@ -151,13 +151,15 @@
   - HellfireFreezerMachineCircuitBoard
   - PortableScrubberMachineCircuitBoard
   - HolofanProjector
+  technologyPrerequisites:
+  - AtmosphericTech
 
 - type: technology
   id: AdvancedToolsTechnology
   name: research-technology-advanced-tools
   icon:
-    sprite: Objects/Tools/jaws_of_life.rsi
-    state: rnd_jaws_pry
+    sprite: Objects/Tools/welder_experimental.rsi
+    state: icon
   discipline: Industrial
   tier: 2
   cost: 10000
@@ -180,6 +182,7 @@
   recipeUnlocks:
     - OreBagOfHolding
     - MiningDrillDiamond
+    - AdvancedMineralScannerEmpty
 
 # Tier 3
 

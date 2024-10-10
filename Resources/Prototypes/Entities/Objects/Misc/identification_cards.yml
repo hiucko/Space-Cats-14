@@ -436,6 +436,21 @@
 
 - type: entity
   parent: IDCardStandard
+  id: VisitorIDCard
+  name: visitor ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idvisitor
+  - type: IdCard
+    jobTitle: Visitor
+    jobIcon: JobIconVisitor
+  - type: PresetIdCard
+    job: Visitor
+
+- type: entity
+  parent: IDCardStandard
   id: BrigmedicIDCard
   name: brigmedic ID card
   components:
@@ -457,114 +472,90 @@
     - state: idcentcom
   - type: Item
     heldPrefix: blue
-  - type: IdCard
-    jobTitle: Central Commander
-    jobIcon: JobIconNanotrasen
-  - type: Access
-    groups:
-    - AllAccess
-    tags:
-    - CentralCommand
+#  - type: PresetIdCard
+#    job: CentralCommandOfficial
 
 - type: entity
-  parent: CentcomIDCard
+  parent: IDCardStandard
   id: ERTLeaderIDCard
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   name: ERT leader ID card
   components:
   - type: Sprite
     layers:
     - state: gold
     - state: ert_commander
-  - type: IdCard
-    jobTitle: ERT Company Commander
+  - type: PresetIdCard
+    job: ERTLeader
   - type: Item
     heldPrefix: gold
 
 - type: entity
-  parent: ERTLeaderIDCard
+  parent: IDCardStandard
   id: ERTChaplainIDCard
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   name: ERT chaplain ID card
   components:
   - type: Sprite
     layers:
     - state: gold
     - state: ert_chaplain # we have the sprite for the id but dont have chaplain ERT equipment for now.
-  - type: IdCard
-    jobTitle: ERT Soul Officer
+  - type: PresetIdCard
+    job: ERTChaplain
   - type: Item
     heldPrefix: blue
 
 - type: entity
-  parent: ERTChaplainIDCard
+  parent: IDCardStandard
   id: ERTEngineerIDCard
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   name: ERT engineer ID card
   components:
   - type: Sprite
     layers:
     - state: gold
     - state: ert_engineer
-  - type: IdCard
-    jobTitle: ERT Field Engineer
+  - type: PresetIdCard
+    job: ERTEngineer
 
 - type: entity
-  parent: ERTChaplainIDCard
+  parent: IDCardStandard
   id: ERTJanitorIDCard
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   name: ERT janitor ID card
   components:
   - type: Sprite
     layers:
     - state: gold
     - state: ert_janitor
-  - type: IdCard
-    jobTitle: ERT Custodian
+  - type: PresetIdCard
+    job: ERTJanitor
 
 - type: entity
-  parent: ERTChaplainIDCard
+  parent: IDCardStandard
   id: ERTMedicIDCard
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   name: ERT medic ID card
   components:
   - type: Sprite
     layers:
     - state: gold
     - state: ert_medic
-  - type: IdCard
-    jobTitle: ERT Medical Doctor
+  - type: PresetIdCard
+    job: ERTMedical
 
 - type: entity
-  parent: ERTChaplainIDCard
+  parent: IDCardStandard
   id: ERTSecurityIDCard
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   name: ERT security ID card
   components:
   - type: Sprite
     layers:
     - state: gold
     - state: ert_security
-  - type: IdCard
-    jobTitle: ERT Field Officer
-
-- type: entity
-  parent: IDCardStandard
-  id: CentcomIDCardSyndie
-  name: command officer ID card
-  suffix: Fake
-  components:
-  - type: Sprite
-    layers:
-    - state: centcom
-    - state: idcentcom
-  - type: Item
-    heldPrefix: blue
-  - type: IdCard
-    jobTitle: Central Commander
-  - type: Access
-    tags:
-    - Maintenance
+  - type: PresetIdCard
+    job: ERTSecurity
 
 - type: entity
   parent: IDCardStandard
@@ -579,7 +570,7 @@
       job: Musician
 
 - type: entity
-  parent: CentcomIDCard
+  parent: IDCardStandard
   id: CentcomIDCardDeathsquad
   name: death squad ID card
   components:
@@ -588,8 +579,8 @@
     - state: centcom
   - type: Item
     heldPrefix: blue
-  - type: IdCard
-    jobTitle: Centcomm Agent
+  - type: PresetIdCard
+    job: DeathSquad
 
 - type: entity
   name: passenger ID card
@@ -760,8 +751,8 @@
     - state: centcom
   - type: Item
     heldPrefix: blue
-  - type: IdCard
-    jobTitle: Centcomm Quarantine Officer
+  - type: PresetIdCard
+    job: CBURN
 
 - type: entity
   parent: IDCardStandard
@@ -775,6 +766,7 @@
     - state: idcluwne
   - type: IdCard
     jobTitle: Cluwne
+    jobColor: "#AA0000"
   - type: Unremoveable
 
 - type: entity

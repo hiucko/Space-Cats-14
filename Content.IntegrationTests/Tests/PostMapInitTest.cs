@@ -59,6 +59,7 @@ namespace Content.IntegrationTests.Tests
             "CorvaxTerra",
             "CorvaxFrame",
             "CorvaxPearl",
+            "CorvaxTushkan",
             // Corvax-End
             "Dev",
             "TestTeg",
@@ -73,6 +74,7 @@ namespace Content.IntegrationTests.Tests
             "Marathon",
             "MeteorArena",
             //start-spacecats
+            "PearlSC",
             "BagelSC",
             "BoxSC",
             "ClusterSC",
@@ -80,6 +82,7 @@ namespace Content.IntegrationTests.Tests
             "OmegaSC",
             "PackedSC",
             "ReachSC",
+            "AspidSC",
             //end-spacecats
             //start-backmen
             "CentCommv2",

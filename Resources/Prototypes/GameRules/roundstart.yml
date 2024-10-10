@@ -105,7 +105,7 @@
       spawnerPrototype: SpawnPointNukeopsCommander
       startingGear: SyndicateCommanderGearFull
       roleLoadout:
-      - RoleSurvivalSyndicate
+      - RoleSurvivalNukie
       components:
       - type: NukeOperative
       - type: RandomMetadata
@@ -123,7 +123,7 @@
       spawnerPrototype: SpawnPointNukeopsMedic
       startingGear: SyndicateOperativeMedicFull
       roleLoadout:
-      - RoleSurvivalSyndicate
+      - RoleSurvivalNukie
       components:
       - type: NukeOperative
       - type: RandomMetadata
@@ -143,7 +143,7 @@
       playerRatio: 10
       startingGear: SyndicateOperativeGearFull
       roleLoadout:
-      - RoleSurvivalSyndicate
+      - RoleSurvivalNukie
       components:
       - type: NukeOperative
       - type: RandomMetadata
@@ -281,8 +281,12 @@
       - !type:NestedSelector
         tableId: CargoGiftsTable
       - !type:NestedSelector
-        tableId: BasicBackmenEventsTable # backmen events
-        
+        tableId: NormalBackmenEventsTable # backmen events
+      - !type:NestedSelector
+        tableId: CalmPestEventsTable
+      - !type:NestedSelector
+        tableId: SpicyPestEventsTable
+
 #- type: entityTable
 #  id: SpaceTrafficControlTable
 #  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
@@ -323,8 +327,8 @@
 #      tableId: SpaceTrafficControlTable
 
 #- type: entity
-#  id: SpaceTrafficControlFriendlyEventScheduler 
-#  parent: BaseGameRule                  
+#  id: SpaceTrafficControlFriendlyEventScheduler
+#  parent: BaseGameRule
 #  components:
 #  - type: BasicStationEventScheduler
 #    minimumTimeUntilFirstEvent: 1200 # 20 mins

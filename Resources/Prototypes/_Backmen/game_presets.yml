@@ -39,7 +39,7 @@
   rules:
   - BlobGameMode
   - BasicStationEventScheduler
-  #  -  #backmen: currency
+  - WageScheduler #backmen: currency
   - BasicRoundstartVariation
   - SubGamemodesRule
   # - MeteorSwarmScheduler
@@ -56,7 +56,7 @@
   rules:
   - FleshCult
   - BasicStationEventScheduler
-  #  -  #backmen: currency
+  - WageScheduler #backmen: currency
   - BasicRoundstartVariation
   - SubGamemodesRule
   # - MeteorSwarmScheduler
@@ -271,3 +271,38 @@
   - WageScheduler #backmen: currency
   - BasicRoundstartVariation
   # - MeteorSwarmScheduler
+
+- type: gamePreset
+  id: SuperKessler
+  alias:
+  - supermeteor
+  - bombit
+  - superkessler
+  - superkesler
+  name: super-kessler-gamemode-title
+  description: super-kessler-gamemode-description
+  showInVote: false
+  rules:
+  - BasicStationEventScheduler
+  - WageScheduler #backmen: currency
+  - BasicRoundstartVariation
+  # Oh my god.
+  - KesslerSyndromeScheduler
+  # - MeteorSwarmMildScheduler
+  # - MeteorSwarmScheduler
+  - RampingStationEventScheduler
+
+- type: gamePreset
+  id: BabelTower
+  name: babelTower-title
+  description: babelTower-description
+  minPlayers: 5
+  showInVote: true
+  rules:
+    - BabelTower
+    - BasicStationEventScheduler
+    - WageScheduler
+    - BasicRoundstartVariation
+   # - SpaceTrafficControlEventScheduler
+   # - SpaceTrafficControlFriendlyEventScheduler
+    - ExtendedThief

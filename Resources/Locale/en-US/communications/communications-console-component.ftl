@@ -17,10 +17,12 @@ comms-console-shuttle-unavailable = Shuttle is currently unavailable
 comms-console-message-too-long = Message is too long
 
 # Placeholder values
-comms-console-announcement-sent-by = Sent by
+comms-console-announcement-sent-by = Sent by {$author}
+comms-console-announcement-sent-by-with-location = Sent by {$author} {$location}.
 comms-console-announcement-unknown-sender = Unknown
 
 # Comms console variant titles
 comms-console-announcement-title-station = Communications Console
 comms-console-announcement-title-centcom = Central Command
 comms-console-announcement-title-nukie = Syndicate Nuclear Operative
+comms-console-announcement-title-station-ai = Station AI

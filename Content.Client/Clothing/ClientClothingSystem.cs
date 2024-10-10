@@ -47,13 +47,9 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"pocket1", "POCKET1"},
         {"pocket2", "POCKET2"},
         {"suitstorage", "SUITSTORAGE"},
-        {"underpants", "UNDERPANTS"}, //backmen:underclothing
-        {"undershirt", "UNDERSHIRT"}, //backmen:underclothing
-        {"socks", "SOCKS"}, //backmen:underclothing
     };
 
     [Dependency] private readonly IResourceCache _cache = default!;
-    [Dependency] private readonly ISerializationManager _serialization = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
     [Dependency] private readonly DisplacementMapSystem _displacement = default!;
 
@@ -327,7 +323,8 @@ public sealed class ClientClothingSystem : ClothingSystem
                 if (layerData.State is not null && inventory.SpeciesId is not null && layerData.State.EndsWith(inventory.SpeciesId))
                     continue;
 
-                _displacement.TryAddDisplacement(displacementData, sprite, index, key, revealedLayers);
+                if (_displacement.TryAddDisplacement(displacementData, sprite, index, key, revealedLayers))
+                    index++;
             }
         }
 

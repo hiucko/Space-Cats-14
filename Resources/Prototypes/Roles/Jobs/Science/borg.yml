@@ -6,15 +6,26 @@
   playTimeTracker: JobStationAi
   requirements:
   - !type:RoleTimeRequirement
-    role: JobBorg
-    time: 18000  # 5 hrs
+    role: JobCargoBorg
+    time: 1200
+  - !type:RoleTimeRequirement
+    role: JobEngenerBorg
+    time: 1200
+  - !type:RoleTimeRequirement
+    role: JobJanitorBorg
+    time: 1200
+  - !type:RoleTimeRequirement
+    role: JobMedIcalBorg
+    time: 1200
+  - !type:RoleTimeRequirement
+    role: JobServiceBorg
+    time: 1200
   canBeAntag: false
   icon: JobIconStationAi
   supervisors: job-supervisors-rd
   jobEntity: StationAiBrain
-  # start-backmen
-  startingGear: RobotGear # for char preview only
-  # end-backmen
+  startingGear: RobotGear # backmen
+  applyTraits: false
 
 - type: job
   id: Borg
@@ -28,6 +39,5 @@
   icon: JobIconBorg
   supervisors: job-supervisors-rd
   jobEntity: PlayerBorgGeneric
-  # start-backmen
-  startingGear: RobotGear # for char preview only
-  # end-backmen
+  startingGear: RobotGear # backmen
+  applyTraits: false

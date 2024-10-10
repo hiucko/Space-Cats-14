@@ -16,8 +16,10 @@
     - id: MimicVendorRule
     - id: MouseMigration
     - id: PowerGridCheck
+    - id: RandomSentience
     - id: SlimesSpawn
     - id: SolarFlare
+    - id: SnakeSpawn
     - id: SpiderClownSpawn
     - id: SpiderSpawn
     # - id: VentClog
@@ -34,36 +36,35 @@
     - id: SleeperAgents
     - id: ZombieOutbreak
 
-
 - type: entity
   id: BaseStationEvent
   parent: BaseGameRule
   abstract: true
   components:
-    - type: GameRule
-      delay:
-        min:  10
-        max:  20
+  - type: GameRule
+    delay:
+      min:  10
+      max:  20
 
 - type: entity
   id: BaseStationEventShortDelay
   parent: BaseGameRule
   abstract: true
   components:
-    - type: GameRule
-      delay:
-        min:  10
-        max:  20
+  - type: GameRule
+    delay:
+      min:  10
+      max:  20
 
 - type: entity
   id: BaseStationEventLongDelay
   parent: BaseGameRule
   abstract: true
   components:
-    - type: GameRule
-      delay:
-        min:  40
-        max:  60
+  - type: GameRule
+    delay:
+      min:  40
+      max:  60
 
 - type: entity
   id: AnomalySpawn
@@ -113,6 +114,10 @@
   parent: BaseGameRule
   components:
   - type: StationEvent
+    startAudio:
+      path: /Audio/Announcements/power_off.ogg
+      params:
+        volume: -4
     weight: 7
     duration: 1
     minimumPlayers: 15
@@ -128,13 +133,15 @@
     weight: 3
     duration: 1
   - type: BureaucraticErrorRule
+    ignoredJobs:
+    - StationAi
 
 - type: entity
   id: ClericalError
   parent: BaseGameRule
   components:
   - type: StationEvent
-    startAnnouncement: station-event-clerical-error-announcement
+    startAnnouncement: station-event-mouse-migration-announcement
     minimumPlayers: 15
     weight: 5
     duration: 1
@@ -159,10 +166,13 @@
     weight: 6.5
     earliestStart: 40
     reoccurrenceDelay: 20
-    minimumPlayers: 10
-  - type: AntagRandomSpawn
+    minimumPlayers: 20
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
   - type: AntagSpawner
     prototype: MobDragon
+  - type: DragonRule
   - type: AntagObjectives
     objectives:
     - CarpRiftsObjective
@@ -177,8 +187,6 @@
       mindComponents:
       - type: DragonRole
         prototype: Dragon
-      - type: RoleBriefing
-        briefing: dragon-role-briefing
 
 - type: entity
   parent: BaseGameRule
@@ -283,68 +291,6 @@
   - type: KudzuGrowthRule
 
 - type: entity
-  id: MouseMigration
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    earliestStart: 15
-    weight: 6
-    duration: 50
-  - type: VentCrittersRule
-    entries:
-    - id: MobMouse
-      prob: 0.02
-    - id: MobMouse1
-      prob: 0.02
-    - id: MobMouse2
-      prob: 0.02
-# Events always spawn a critter regardless of Probability https://github.com/space-wizards/space-station-14/issues/28480 I added the Rat King to their own event with a player cap.
-
-- type: entity
-  id: KingRatMigration
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    earliestStart: 15
-    weight: 6
-    duration: 50
-    minimumPlayers: 30 # Hopefully this is enough for the Rat King's potential Army (it was not, raised from 15 -> 30)
-  - type: VentCrittersRule
-    entries:
-    - id: MobMouse
-      prob: 0.02
-    - id: MobMouse1
-      prob: 0.02
-    - id: MobMouse2
-      prob: 0.02
-    specialEntries:
-    - id: SpawnPointGhostRatKing
-      prob: 0.001
-
-- type: entity
-  id: CockroachMigration
-  parent: BaseStationEventShortDelay
-  components:
-  - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    weight: 6
-    duration: 50
-  - type: VentCrittersRule
-    entries:
-    - id: MobCockroach
-      prob: 0.03
-    - id: MobMothroach
-      prob: 0.008
-
-- type: entity
   id: PowerGridCheck
   parent: BaseStationEventShortDelay
   components:
@@ -356,8 +302,12 @@
       path: /Audio/Announcements/power_off.ogg
       params:
        volume: -4
-    duration: 60
-    maxDuration: 120
+    duration: 120
+    maxDuration: 180
+    endAudio:
+      path: /Audio/Announcements/power_on.ogg
+      params:
+        volume: -4
   - type: PowerGridCheckRule
 
 - type: entity
@@ -411,9 +361,9 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    #startAudio:
-    #  path: /Audio/Announcements/attention.ogg
+    startAnnouncement: station-event-mouse-migration-announcement
+    startAudio:
+      path: /Audio/Announcements/infestation.ogg
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
@@ -428,13 +378,34 @@
       prob: 0.02
 
 - type: entity
-  id: SpiderSpawn
+  id: SnakeSpawn
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 60
+  - type: VentCrittersRule
+    entries:
+    - id: MobPurpleSnake
+      prob: 0.02
+    - id: MobSmallPurpleSnake
+      prob: 0.02
+    - id: MobCobraSpace
+      prob: 0.02
+
+- type: entity
+  id: SpiderSpawn
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-mouse-migration-announcement
+    startAudio:
+      path: /Audio/Announcements/infestation.ogg
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
@@ -449,9 +420,9 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAnnouncement: station-event-mouse-migration-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/Announcements/infestation.ogg
     earliestStart: 20
     minimumPlayers: 20
     weight: 1.5
@@ -466,9 +437,9 @@
   parent: BaseGameRule
   components:
   - type: StationEvent
-    earliestStart: 50
-    minimumPlayers: 10
-    weight: 2
+    earliestStart: 90
+    minimumPlayers: 40
+    weight: 1 # Zombies was happening basically every single survival round, so now it's super rare
     duration: 1
   - type: ZombieRule
   - type: AntagSelection
@@ -521,6 +492,9 @@
       max: 1
       pickPlayer: false
       startingGear: SyndicateLoneOperativeGearFull
+      roleLoadout:
+      - RoleSurvivalNukie
+
       components:
       - type: NukeOperative
       - type: RandomMetadata
@@ -633,9 +607,9 @@
   id: MimicVendorRule
   parent: BaseGameRule
   components:
-    - type: StationEvent
-      earliestStart: 0
-      minimumPlayers: 20
-      maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
-      weight: 5
-    - type: MobReplacementRule
+  - type: StationEvent
+    earliestStart: 0
+    minimumPlayers: 20
+    maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
+    weight: 5
+  - type: MobReplacementRule

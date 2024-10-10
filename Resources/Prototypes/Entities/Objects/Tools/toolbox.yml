@@ -25,12 +25,6 @@
   - type: Tag
     tags:
     - Toolbox
-  - type: GenericVisualizer
-    visuals:
-      enum.StorageVisuals.Open:
-        base:
-          True: { state: icon-open }
-          False: { state: icon }
   - type: Appearance
 
 - type: entity
@@ -148,7 +142,7 @@
   id: ToolboxThief
   name: thief undetermined toolbox
   description: This is where your favorite thief's supplies lie. Try to remember which ones.
-  parent: BaseItem
+  parent: [ BaseItem, BaseMinorContraband ]
   components:
   - type: Sprite
     sprite: Objects/Tools/Toolboxes/toolbox_thief.rsi
