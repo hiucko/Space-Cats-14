@@ -18,3 +18,73 @@
   - type: StorageFill
     contents:
       - id: CloakerHardsuit
+
+- type: cargoProduct
+  id: MedkitsCrate
+  icon:
+    sprite: _SpaceCats/Clothing/Head/Hardsuits/firstaidkits.rsi
+    state: firstaid
+  product: MedkitsCrate
+  cost: 5000
+  category: cargoproduct-category-name-medical
+  group: market
+
+- type: entity
+  id: MedkitsCrate
+  parent: [ CrateWeaponSecure, BaseRestrictedContraband ]
+  name: набор полевого медика
+  description: Содержит всё для реанимации бойца и оказания первой медицинской помощи.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MedkitEmergencyMedipenSecurity
+      - id: MedkitEmergencyMercenary
+      - id: Defibrillator
+      - id: RollerBedSpawnFolded
+      - id: Brutepack
+        amount: 3
+
+- type: cargoProduct
+  id: MedicalSuppliess
+  icon:
+    sprite: Objects/Specific/Medical/firstaidkits.rsi
+    state: firstaid
+  product: CrateEmergencyMedipenSecurity
+  cost: 2000
+  category: cargoproduct-category-name-medical
+  group: market
+
+- type: entity
+  name: аптечка продвинутых иньекторов #пополнение припасов СБ. Одна такая будет в шкафу БМ
+  id: MedkitEmergencyMedipenSecurity
+  suffix: иньекторы суфентанила
+  parent: MedkitCombat
+  components:
+  - type: StorageFill
+    contents:
+      - id: EmergencyMedipenSecurity
+        amount: 8
+
+- type: entity
+  id: CrateEmergencyMedipenSecurity
+  parent: CrateMedical
+  name: medical supplies crate
+  description: 8 иньекторов суфентанила.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MedkitEmergencyMedipenSecurity
+
+- type: entity
+  name: аптечка наёмника #покупка в карго
+  id: MedkitEmergencyMercenary
+  suffix: иньекторы суфентанила
+  parent: MedkitCombat
+  components:
+  - type: StorageFill
+    contents:
+      - id: Gauze
+      - id: Cautery
+      - id: SyringeEphedrine
+      - id: SyringeSaline
+      - id: RegenerativeMesh
