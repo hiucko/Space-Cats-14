@@ -22,7 +22,7 @@
 - type: cargoProduct
   id: MedkitsCrate
   icon:
-    sprite: _SpaceCats/Clothing/Head/Hardsuits/firstaidkits.rsi
+    sprite: Objects/Specific/Medical/firstaidkits.rsi
     state: firstaid
   product: MedkitsCrate
   cost: 5000
