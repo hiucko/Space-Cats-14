@@ -13,7 +13,7 @@
           mapNameTemplate: '{0} Pearl island {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'SS'
+            prefixCreator: 'SC'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/corvax_emergency.yml
         - type: StationJobs
