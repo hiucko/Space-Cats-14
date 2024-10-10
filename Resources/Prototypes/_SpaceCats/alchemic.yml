@@ -397,7 +397,7 @@
           Quantity: 20
 
 - type: cargoProduct
-  id: MedicalSupplies
+  id: MedicalSuppliess
   icon:
     sprite: Objects/Specific/Medical/firstaidkits.rsi
     state: firstaid
