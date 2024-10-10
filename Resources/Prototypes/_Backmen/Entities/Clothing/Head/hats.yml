@@ -102,10 +102,9 @@
       sprite: Backmen/Clothing/Head/Hats/cage.rsi
     - type: Clothing
       sprite: Backmen/Clothing/Head/Hats/cage.rsi
-    - type: HeadCage
-    - type: Clothing
       stripDelay: 10
       equipDelay: 5 # to avoid accidentally falling into the trap associated with SelfUnremovableClothing
+    - type: HeadCage
     - type: SelfUnremovableClothing
     - type: ClothingSpeedModifier
       walkModifier: 0.80
