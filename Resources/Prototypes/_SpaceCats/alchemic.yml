@@ -286,7 +286,7 @@
       amount: 1
     SpaceDrugs:
       amount: 1
-    Bicadirine:
+    Bicaridine:
       amount: 1
     Dirozine:
       amount: 1
@@ -342,7 +342,7 @@
   reactants:
     SpaceDrugs:
       amount: 1
-    Bicadirine:
+    Bicaridine:
       amount: 1
   products:
     Tramadol: 4
@@ -397,7 +397,7 @@
           Quantity: 20
 
 - type: cargoProduct
-  id: MedicalSupplies
+  id: MedicalSuppliess
   icon:
     sprite: Objects/Specific/Medical/firstaidkits.rsi
     state: firstaid
