@@ -38,27 +38,3 @@
   cost: 2000
   category: cargoproduct-category-name-medical
   group: market
-
-- type: entity
-  id: CrateEmergencyMedipenSecurity
-  parent: CrateMedical
-  name: medical supplies crate
-  description: 8 иньекторов суфентанила.
-  components:
-  - type: StorageFill
-    contents:
-      - id: MedkitEmergencyMedipenSecurity
-
-- type: entity
-  name: аптечка наёмника #покупка в карго
-  id: MedkitEmergencyMercenary
-  suffix: иньекторы суфентанила
-  parent: MedkitCombat
-  components:
-  - type: StorageFill
-    contents:
-      - id: Gauze
-      - id: Cautery
-      - id: SyringeEphedrine
-      - id: SyringeSaline
-      - id: RegenerativeMesh
