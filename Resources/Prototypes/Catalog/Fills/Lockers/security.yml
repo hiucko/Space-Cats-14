@@ -30,6 +30,8 @@
         amount: 2
       - id: RemoteSignaller
         amount: 2
+      - id: ClothingHeadCageSec # cats
+        amount: 3
 
 - type: entity
   id: LockerWardenFilled
@@ -65,6 +67,8 @@
         amount: 2
       - id: RemoteSignaller
         amount: 2
+      - id: ClothingHeadCageSec # cats
+        amount: 3
 
 - type: entity
   id: LockerSecurityFilled
