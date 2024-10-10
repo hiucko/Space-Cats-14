@@ -240,9 +240,6 @@
         conditions:
         - !type:MobStateCondition
           mobstate: Critical
-        - !type:ReagentThreshold
-          min: 0
-          max: 20
         damage:
           groups:
             Brute: -3
