@@ -44,7 +44,7 @@
   components:
   - type: Sprite
     sprite: _SpaceCats/Misc/Firefly.rsi
-    state: plushie_elina
+    state: firefly_toy
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Backmen/Voice/Felinid/cat_hiss1.ogg
