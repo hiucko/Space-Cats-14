@@ -8,8 +8,8 @@
     Plastic: 250
 
 - type: latheRecipe
-  id: СhemicalImplantTrigger
-  result: СhemicalImplantTrigger
+  id: ChemicalImplantTrigger
+  result: ChemicalImplantTrigger
   completetime: 10
   materials:
     Glass: 100
