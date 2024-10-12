@@ -39,6 +39,24 @@
     - HideContextMenu
 
 - type: entity
+  parent: BaseSubdermalImplant
+  id: ChemicalImplantTrigger
+  name: Auto chemical implant
+  description: Inject chemicats to blood stream from small capsules in itself
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+  - type: SolutionContainerManager
+  - type: InjectOnTrigger
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Critical
+  - type: Tag
+    tags:
+    - SubdermalImplant
+    - HideContextMenu
+
+- type: entity
   parent: ChemicalImplant
   id: StimulantsImplant
   name: Stimulants implant
