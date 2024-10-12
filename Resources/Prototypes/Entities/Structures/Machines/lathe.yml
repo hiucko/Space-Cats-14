@@ -1001,7 +1001,7 @@
       - WhiteCane
     dynamicRecipes:
       - ChemicalImplant # cats
-      - СhemicalImplantTrigger # cats
+      - ChemicalImplantTrigger # cats
       - ChemicalPayload
       - CryostasisBeaker
       - BluespaceBeaker
