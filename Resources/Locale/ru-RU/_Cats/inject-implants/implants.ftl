@@ -13,6 +13,9 @@ ent-StimulantsImplant = Имплант стимулятора
     .desc = Вводит в кровь стимулятор из заранее установленных в имплант капсул
 ent-ActionChemicalCapsule = Ввести реактивы в кровь
     .desc = Вводит в кровь вещества из заранее установленных в имплант капсул
+ent-ChemicalImplantTriggerDead = Кислотный имплантер
+    .desc = Вводит в кровь вещества из заранее установленных в имплант капсул. В нём кислота
+    .suffix = Кислота
 
 inject-trigger-empty-message = В импланте нет полных капсул!
 inject-trigger-cant-inject-message = Нельзя сделать инъекцию в { $target }!

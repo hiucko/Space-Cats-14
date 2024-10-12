@@ -58,6 +58,26 @@
 
 - type: entity
   parent: ChemicalImplant
+  id: ChemicalImplantTriggerDead
+  name: ChemicalImplant
+  suffix: Toxin
+  description: Inject chemicats to blood stream from small capsules in itself
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TriggerOnSignal
+  - type: DeviceLinkSink
+    ports:
+      - Trigger
+  - type: SolutionContainerManager
+    solutions:
+      container1:
+        reagents:
+        - ReagentId: Toxin
+          Quantity: 20
+        maxVol: 20
+
+- type: entity
+  parent: ChemicalImplant
   id: StimulantsImplant
   name: Stimulants implant
   description: Inject stimulants to blood stream from small capsules in itself
