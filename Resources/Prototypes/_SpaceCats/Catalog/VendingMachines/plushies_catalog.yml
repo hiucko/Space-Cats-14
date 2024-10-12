@@ -1,0 +1,43 @@
+- type: listing
+  id: RobustSoftdrinksInventory1
+  productEntity: PlushieLolyItsMyLife
+  cost:
+    SpaceCash: 120
+  categories:
+    - PlushiesSponsor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 5
+
+- type: listing
+  id: RobustSoftdrinksInventory1
+  productEntity: PlushieAcolyte16
+  cost:
+    SpaceCash: 120
+  categories:
+    - PlushiesSponsor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 5
+
+- type: listing
+  id: RobustSoftdrinksInventory1
+  productEntity: PlushieFirefly
+  cost:
+    SpaceCash: 120
+  categories:
+    - PlushiesSponsor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 5
+
+- type: listing
+  id: RobustSoftdrinksInventory1
+  productEntity: PlushieFejet
+  cost:
+    SpaceCash: 120
+  categories:
+    - PlushiesSponsor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 5

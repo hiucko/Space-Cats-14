@@ -15,7 +15,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Store
     categories:
-      - RobustSoftdrinksInventory
+      - PlushiesSponsor
     currencyWhitelist:
       - SpaceCash
     balance:
