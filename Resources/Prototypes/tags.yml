@@ -301,6 +301,9 @@
   id: Carpet
 
 - type: Tag
+  id: Card
+
+- type: Tag
   id: CarpetBlack
 
 - type: Tag
@@ -675,6 +678,9 @@
   id: GasVent
 
 - type: Tag
+  id: GatewayChip
+
+- type: Tag
   id: Gauze
 
 - type: Tag
@@ -815,6 +821,9 @@
 - type: Tag
   id: Igniter
 
+- type: Tag
+  id: IgnoreMelee
+  
 - type: Tag
   id: Ingredient
 
@@ -970,6 +979,9 @@
   id: ModularReceiver
 
 - type: Tag
+  id: ModuleSwarmer
+
+- type: Tag
   id: MonkeyCube
 
 - type: Tag
@@ -1100,6 +1112,9 @@
 
 - type: Tag
   id: Powerdrill
+
+- type: Tag
+  id: PockerChips
 
 - type: Tag
   id: PrisonUniform
@@ -1241,6 +1256,9 @@
   id: Spear
 
 - type: Tag
+  id: SpearRatvar
+
+- type: Tag
   id: SpeedLoaderCap
 
 - type: Tag
@@ -1290,6 +1308,15 @@
 
 - type: Tag
   id: SurveillanceCameraMonitorCircuitboard
+
+- type: Tag
+  id: SwarmerSuperCell
+
+- type: Tag
+  id: Swarmer
+
+- type: Tag
+  id: SwarmerAcces
 
 - type: Tag
   id: Syndicate
