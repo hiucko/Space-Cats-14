@@ -1,8 +1,15 @@
 - type: entity
-  parent: VendingMachineCola
+  parent: VendingMachine
   id: SpaceCatsVendingMachineSponsor
   suffix: Sponsor
   components:
+  - type: VendingMachine
+    pack: PTechInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
   - type: Sprite
     sprite: _SpaceCats/Structures/Machines/VendingMachines/sponsor.rsi
     layers:
