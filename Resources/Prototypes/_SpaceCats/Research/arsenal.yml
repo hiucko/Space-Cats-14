@@ -7,5 +7,5 @@
   discipline: Arsenal
   tier: 2
   cost: 6000
-  recipeUnlocks:sd
+  recipeUnlocks:
   - EnergyDomeDirectionalTurtle
