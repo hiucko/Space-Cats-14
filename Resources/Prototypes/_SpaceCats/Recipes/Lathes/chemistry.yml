@@ -4,7 +4,7 @@
   completetime: 10
   materials:
     Glass: 100
-    Plastic: 250
+    Plasma: 500
     Plastic: 250
 
 - type: latheRecipe
