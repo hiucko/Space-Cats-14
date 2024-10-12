@@ -1,88 +1,31 @@
 {
   "version": 1,
   "license": "CC-BY-SA-4.0",
-  "copyright": "created by @CrimeMoot special fork SpaceCats",
+  "copyright": "The art belongs to Woods#1999 on discord",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "normal-unshaded"
-    },
-    {
-      "name": "normal"
-    },
-    {
-      "name": "eject-unshaded",
-      "delays": [
-        [
-          0.1,
-          0.4,
-          0.1
-        ],
-        [
-          0.1,
-          0.4,
-          0.1
-        ],
-        [
-          0.1,
-          0.4,
-          0.1
-        ],
-        [
-          0.1,
-          0.4,
-          0.1
-        ]
-      ]
-    },
-    {
-      "name": "deny-unshaded",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ],
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ],
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ],
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ]
-      ]
+      "name": "broken"
     },
     {
       "name": "off"
     },
     {
-      "name": "broken"
+      "name": "panel"
     },
     {
-      "name": "panel"
+      "name": "normal-unshaded",
+      "delays": [
+        [
+          1.5,
+          0.1,
+          1.5,
+          0.1
+        ]
+      ]
     }
   ]
 }
