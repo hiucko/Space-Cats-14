@@ -68,6 +68,9 @@
   - type: DeviceLinkSink
     ports:
       - Trigger
+  - type: StationLimitedNetwork
+  - type: WirelessNetworkConnection
+    range: 500
   - type: SolutionContainerManager
     solutions:
       container1:
