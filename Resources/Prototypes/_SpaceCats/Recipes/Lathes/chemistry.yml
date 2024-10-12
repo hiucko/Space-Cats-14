@@ -1,6 +1,6 @@
 - type: latheRecipe
-  id: ChemicalImplant
-  result: ChemicalImplant
+  id: ChemicalsImplanter
+  result: ChemicalsImplanter
   completetime: 10
   materials:
     Glass: 100
@@ -8,8 +8,8 @@
     Plastic: 250
 
 - type: latheRecipe
-  id: ChemicalImplantTrigger
-  result: ChemicalImplantTrigger
+  id: ChemicalImplanterTrigger
+  result: ChemicalImplanterTrigger
   completetime: 10
   materials:
     Glass: 100
