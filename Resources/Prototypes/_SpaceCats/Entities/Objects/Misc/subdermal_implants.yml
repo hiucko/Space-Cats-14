@@ -75,6 +75,10 @@
         - ReagentId: Toxin
           Quantity: 20
         maxVol: 20
+  - type: InjectOnTrigger
+    solutions:
+    - name: container1
+      transferAmount: 20
 
 - type: entity
   parent: ChemicalImplant
