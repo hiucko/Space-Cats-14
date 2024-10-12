@@ -16,6 +16,9 @@ ent-ActionChemicalCapsule = Ввести реактивы в кровь
 ent-ChemicalImplantTriggerDead = Кислотный имплантер
     .desc = Вводит в кровь вещества из заранее установленных в имплант капсул. В нём кислота
     .suffix = Кислота
+ent-ChemicalImplanterTriggerDead = { ent-ChemicalImplantTriggerDead }
+    .desc = Вводит в кровь вещества из заранее установленных в имплант капсул. В нём кислота
+    .suffix = Кислота
 
 inject-trigger-empty-message = В импланте нет полных капсул!
 inject-trigger-cant-inject-message = Нельзя сделать инъекцию в { $target }!

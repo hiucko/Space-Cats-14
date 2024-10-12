@@ -13,3 +13,19 @@
   components:
     - type: Implanter
       implant: StimulantsImplant
+
+- type: entity
+  id: ChemicalImplanterTriggerDead
+  parent: BaseImplantOnlyImplanter
+  suffix: Chemical, Auto
+  components:
+    - type: Implanter
+      implant: ChemicalImplantTriggerDead
+
+- type: entity
+  id: ChemicalImplanterTrigger
+  parent: BaseImplantOnlyImplanter
+  suffix: Toxin
+  components:
+    - type: Implanter
+      implant: ChemicalImplantTrigger

@@ -8,5 +8,5 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-  - ChemicalImplant
-  - ChemicalImplantTrigger
+  - ChemicalsImplanter
+  - ChemicalImplanterTrigger
