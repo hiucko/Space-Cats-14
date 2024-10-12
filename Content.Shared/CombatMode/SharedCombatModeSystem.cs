@@ -49,14 +49,16 @@ public abstract class SharedCombatModeSystem : EntitySystem
         // TODO better handling of predicted pop-ups.
         // This probably breaks if the client has prediction disabled.
 
+        // start-backmen: combatmode
+//        _audio.PlayPredicted(component.IsInCombatMode ? component.OnSound : component.OffSound, uid, uid);
+/*
         if (!_netMan.IsClient || !Timing.IsFirstTimePredicted)
             return;
 
-        // Ataraxia START
-//        _audio.PlayPvs(component.IsInCombatMode ? "/Audio/Backmen/Effects/CombatMode/on.ogg" : "/Audio/_Ataraxia/Effects/CombatMode/off.ogg", uid);
-
-//        var msg = component.IsInCombatMode ? "action-popup-combat-enabled" : "action-popup-combat-disabled";
-//        _popup.PopupEntity(Loc.GetString(msg), args.Performer, args.Performer);
+        var msg = component.IsInCombatMode ? "action-popup-combat-enabled" : "action-popup-combat-disabled";
+        _popup.PopupEntity(Loc.GetString(msg), args.Performer, args.Performer);
+*/
+        // end-backmen: combatmode
     }
 
     public void SetCanDisarm(EntityUid entity, bool canDisarm, CombatModeComponent? component = null)
