@@ -200,7 +200,7 @@
   - type: Clothing
     sprite: Backmen/Objects/Weapons/Gunsx64/Shotguns/guard-17/tiny.rsi
   - type: BallisticAmmoProvider
-    capacity: 6
+    capacity: 8
     soundRack:
       path: /Audio/Weapons/Guns64/Shotguns/trenchgun_pump.ogg
     soundInsert:
