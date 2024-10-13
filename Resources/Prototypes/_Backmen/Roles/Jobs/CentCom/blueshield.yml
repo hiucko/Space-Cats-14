@@ -64,6 +64,6 @@
     pocket2: RadioBlueShieldSupplyPod
   storage:
     back:
-    - BlueShieldSetLoadouts
+    - BlueShieldLoadout
     - BlueShieldSetMedical
     - CombatKnifeSpetsnaz
