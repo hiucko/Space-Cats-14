@@ -51,7 +51,7 @@
 - type: loadout
   id: BlueshieldCloak
   equipment:
-    neck: ADTClothingNeckCloakBlueshield
+    neck: ClothingNeckCloakBlueshield
 
 - type: loadout
   id: ClothingNeckCloakBlueshields
