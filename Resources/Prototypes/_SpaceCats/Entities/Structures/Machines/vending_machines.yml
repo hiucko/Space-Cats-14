@@ -4,9 +4,14 @@
   suffix: Sponsor
   components:
   - type: VendingMachine
+    pack: BoozeOMatInventory
+    dispenseOnHitChance: 0.00001
+    dispenseOnHitThreshold: 5000
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+  - type: Advertise
+    pack: AmmoVendAds
   - type: Sprite
     sprite: _SpaceCats/Structures/Machines/VendingMachines/sponsor.rsi
     layers:
