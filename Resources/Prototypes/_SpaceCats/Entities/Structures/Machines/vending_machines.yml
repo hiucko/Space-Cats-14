@@ -24,9 +24,6 @@
       - SpaceCash
     balance:
       SpaceCash: 0
-  - type: BuyStoreBank
-    emagCategories:
-      - DrinkVendInventoryEmag
   - type: ActivatableUI
     key: enum.StoreUiKey.Key
     singleUser: true
