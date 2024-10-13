@@ -2,7 +2,6 @@
   id: Quartermaster
   name: job-name-qm
   description: job-description-qm
-  color: "#A46106"
   playTimeTracker: JobQuartermaster
   requirements:
 #    - !type:RoleTimeRequirement
@@ -28,6 +27,7 @@
   - Salvage
   - Quartermaster
   - Maintenance
+  - External
   - Command
   - Brig
   - Cryogenics

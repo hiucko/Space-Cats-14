@@ -1,3 +1,4 @@
+using Content.Server.Administration.Logs;
 using Content.Server.Antag;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Mind;
@@ -5,10 +6,10 @@ using Content.Server.Objectives;
 using Content.Server.PDA.Ringer;
 using Content.Server.Roles;
 using Content.Server.Traitor.Uplink;
+using Content.Shared.Database;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Mind;
 using Content.Shared.NPC.Systems;
-using Content.Shared.Objectives.Systems;
 using Content.Shared.PDA;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Jobs;
@@ -24,30 +25,29 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
 {
     private static readonly Color TraitorCodewordColor = Color.FromHex("#cc3b3b");
 
+    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly AntagSelectionSystem _antag = default!;
+    [Dependency] private readonly SharedJobSystem _jobs = default!;
+    [Dependency] private readonly MindSystem _mindSystem = default!;
+    [Dependency] private readonly NpcFactionSystem _npcFaction = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly NpcFactionSystem _npcFaction = default!;
-    [Dependency] private readonly AntagSelectionSystem _antag = default!;
-    [Dependency] private readonly UplinkSystem _uplink = default!;
-    [Dependency] private readonly MindSystem _mindSystem = default!;
-    [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
-    [Dependency] private readonly SharedJobSystem _jobs = default!;
     [Dependency] private readonly SharedRoleCodewordSystem _roleCodewordSystem = default!;
-    [Dependency] private readonly SharedObjectivesSystem _objectives = default!;
+    [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
+    [Dependency] private readonly UplinkSystem _uplink = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<TraitorRuleComponent, AfterAntagEntitySelectedEvent>(AfterEntitySelected);
-
         SubscribeLocalEvent<TraitorRuleComponent, ObjectivesTextPrependEvent>(OnObjectivesTextPrepend);
     }
 
     protected override void Added(EntityUid uid, TraitorRuleComponent component, GameRuleComponent gameRule, GameRuleAddedEvent args)
     {
         base.Added(uid, component, gameRule, args);
-        SetCodewords(component);
+        SetCodewords(component, args.RuleEntity);
     }
 
     private void AfterEntitySelected(Entity<TraitorRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
@@ -55,9 +55,10 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
         MakeTraitor(args.EntityUid, ent);
     }
 
-    private void SetCodewords(TraitorRuleComponent component)
+    private void SetCodewords(TraitorRuleComponent component, EntityUid ruleEntity)
     {
         component.Codewords = GenerateTraitorCodewords(component);
+        _adminLogger.Add(LogType.EventStarted, LogImpact.Low, $"Codewords generated for game rule {ToPrettyString(ruleEntity)}: {string.Join(", ", component.Codewords)}");
     }
 
     public string[] GenerateTraitorCodewords(TraitorRuleComponent component)
@@ -76,7 +77,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
 
     public bool MakeTraitor(EntityUid traitor, TraitorRuleComponent component, bool giveUplink = true)
     {
-        //Grab the mind if it wasnt provided
+        //Grab the mind if it wasn't provided
         if (!_mindSystem.TryGetMind(traitor, out var mindId, out var mind))
             return false;
 
@@ -88,7 +89,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
         {
             // Calculate the amount of currency on the uplink.
             var startingBalance = component.StartingBalance;
-            if (_jobs.MindTryGetJob(mindId, out _, out var prototype))
+            if (_jobs.MindTryGetJob(mindId, out var prototype))
                 startingBalance = Math.Max(startingBalance - prototype.AntagAdvantage, 0);
 
             // creadth: we need to create uplink for the antag.
@@ -105,28 +106,20 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
                 Loc.GetString("traitor-role-uplink-code-short", ("code", string.Join("-", code).Replace("sharp", "#"))));
         }
 
-        // Get a summary of their objectives
-        List<string> objectives = new List<string>();
-
-        foreach (var objective in mind.Objectives)
-        {
-            var info = _objectives.GetInfo(objective, mindId, mind);
-            if (info == null)
-                continue;
-
-            objectives.Add("- " + info.Value.Title);
-        }
-
-        _antag.SendBriefing(traitor, GenerateBriefing(component.Codewords, objectives.ToArray(), code, issuer), null, component.GreetSoundNotification);
-
+        _antag.SendBriefing(traitor, GenerateBriefing(component.Codewords, code, issuer), null, component.GreetSoundNotification);
 
         component.TraitorMinds.Add(mindId);
 
         // Assign briefing
-        _roleSystem.MindAddRole(mindId, new RoleBriefingComponent
+        //Since this provides neither an antag/job prototype, nor antag status/roletype,
+        //and is intrinsically related to the traitor role
+        //it does not need to be a separate Mind Role Entity
+        _roleSystem.MindHasRole<TraitorRoleComponent>(mindId, out var traitorRole);
+        if (traitorRole is not null)
         {
-            Briefing = briefing
-        }, mind, true);
+            AddComp<RoleBriefingComponent>(traitorRole.Value.Owner);
+            Comp<RoleBriefingComponent>(traitorRole.Value.Owner).Briefing = briefing;
+        }
 
         // Send codewords to only the traitor client
         var color = TraitorCodewordColor; // Fall back to a dark red Syndicate color if a prototype is not found
@@ -148,11 +141,10 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     }
 
     // TODO: figure out how to handle this? add priority to briefing event?
-    private string GenerateBriefing(string[] codewords, string[] objectives, Note[]? uplinkCode, string? objectiveIssuer = null)
+    private string GenerateBriefing(string[] codewords, Note[]? uplinkCode, string? objectiveIssuer = null)
     {
         var sb = new StringBuilder();
         sb.AppendLine(Loc.GetString("traitor-role-greeting", ("corporation", objectiveIssuer ?? Loc.GetString("objective-issuer-unknown"))));
-        sb.AppendLine(Loc.GetString("generic-role-objectives", ("objectives", string.Join("\n", objectives))));
         sb.AppendLine(Loc.GetString("traitor-role-codewords", ("codewords", string.Join(", ", codewords))));
         if (uplinkCode != null)
             sb.AppendLine(Loc.GetString("traitor-role-uplink-code", ("code", string.Join("-", uplinkCode).Replace("sharp", "#"))));
