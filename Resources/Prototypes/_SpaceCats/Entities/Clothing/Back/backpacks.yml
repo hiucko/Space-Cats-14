@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpackSecurity
+  id: ClothingBlueshieldBackpack
+  name: blueshield's backpack
+  description: criminalst backpack
+  components:
+  - type: Sprite
+    sprite: _SpacecCats/Clothing/Back/blueshield_backpack.rsi
