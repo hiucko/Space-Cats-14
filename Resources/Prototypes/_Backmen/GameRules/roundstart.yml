@@ -5,7 +5,8 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: GameRule
-      minPlayers: 15
+#      minPlayers: 15
+      minPlayers: 10   #cats
     - type: FleshCultRule
       faction: Flesh
 
@@ -17,7 +18,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: GameRule
-    minPlayers: 15
+#    minPlayers: 15 
+    minPlayers: 10  #cats
   - type: BlobGameRule
 
 - type: entity
@@ -33,7 +35,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: GameRule
-    minPlayers: 15
+#    minPlayers: 10
+    minPlayers: 5  #cats
   - type: BloodsuckerRule
 
 - type: entity
@@ -50,7 +53,8 @@
   components:
   - type: StationEvent
     earliestStart: 50
-    minimumPlayers: 15
+#    minimumPlayers: 15
+    minimumPlayers: 5  #cats
     weight: 5
     duration: 1
   - type: BloodsuckerRule

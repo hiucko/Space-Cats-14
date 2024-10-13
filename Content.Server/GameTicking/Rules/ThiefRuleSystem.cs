@@ -8,6 +8,7 @@ namespace Content.Server.GameTicking.Rules;
 public sealed class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
 {
     [Dependency] private readonly AntagSelectionSystem _antag = default!;
+    [Dependency] private readonly SharedObjectivesSystem _objectives = default!;
 
     public override void Initialize()
     {
