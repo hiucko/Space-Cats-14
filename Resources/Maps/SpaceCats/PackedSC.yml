@@ -10887,23 +10887,6 @@ entities:
     - type: Transform
       pos: 78.51021,-6.467936
       parent: 2
-- proto: BoxLethalshot
-  entities:
-  - uid: 683
-    components:
-    - type: Transform
-      pos: 16.550106,43.62719
-      parent: 2
-  - uid: 684
-    components:
-    - type: Transform
-      pos: 16.550106,43.486565
-      parent: 2
-  - uid: 685
-    components:
-    - type: Transform
-      pos: 16.550106,43.37719
-      parent: 2
 - proto: BoxLightMixed
   entities:
   - uid: 686
@@ -10925,13 +10908,6 @@ entities:
     components:
     - type: Transform
       pos: 65.52434,11.667425
-      parent: 2
-- proto: BoxMagazineRifle
-  entities:
-  - uid: 690
-    components:
-    - type: Transform
-      pos: 16.12645,43.48032
       parent: 2
 - proto: BoxMouthSwab
   entities:
@@ -33479,6 +33455,12 @@ entities:
       parent: 2
 - proto: ChairOfficeDark
   entities:
+  - uid: 683
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 15.478708,43.618935
+      parent: 2
   - uid: 5161
     components:
     - type: Transform
@@ -35625,6 +35607,12 @@ entities:
       parent: 2
 - proto: ComputerCrewMonitoring
   entities:
+  - uid: 685
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 16.5,43.5
+      parent: 2
   - uid: 5489
     components:
     - type: Transform
@@ -41919,7 +41907,7 @@ entities:
       pos: 25.5,28.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -7569.126
+      secondsUntilStateChange: -7647.828
       state: Closing
   - uid: 6452
     components:
@@ -61490,23 +61478,6 @@ entities:
     - type: Transform
       pos: 19.434057,-38.4118
       parent: 2
-- proto: MagazinePistolHighCapacity
-  entities:
-  - uid: 9455
-    components:
-    - type: Transform
-      pos: 16.721981,43.40844
-      parent: 2
-  - uid: 9456
-    components:
-    - type: Transform
-      pos: 16.612606,43.40844
-      parent: 2
-  - uid: 9457
-    components:
-    - type: Transform
-      pos: 16.362606,43.40844
-      parent: 2
 - proto: MagazinePistolTopSubMachineGun
   entities:
   - uid: 9458
@@ -61662,15 +61633,15 @@ entities:
       parent: 2
 - proto: MedkitCombatFilled
   entities:
+  - uid: 684
+    components:
+    - type: Transform
+      pos: 17.471268,46.607216
+      parent: 2
   - uid: 9483
     components:
     - type: Transform
       pos: 63.555206,-11.384237
-      parent: 2
-  - uid: 9484
-    components:
-    - type: Transform
-      pos: 15.888882,43.4758
       parent: 2
 - proto: MedkitFilled
   entities:
@@ -62412,42 +62383,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 46.5,11.5
-      parent: 2
-  - uid: 9610
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 15.5,43.5
-      parent: 2
-  - uid: 9611
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 16.5,43.5
-      parent: 2
-  - uid: 9612
-    components:
-    - type: Transform
-      pos: 16.5,43.5
-      parent: 2
-  - uid: 9613
-    components:
-    - type: Transform
-      pos: 15.5,43.5
-      parent: 2
-- proto: PlasmaWindoorSecureCommandLocked
-  entities:
-  - uid: 9614
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 16.5,43.5
-      parent: 2
-  - uid: 9615
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 15.5,43.5
       parent: 2
 - proto: PlasmaWindow
   entities:
@@ -74916,16 +74851,6 @@ entities:
       parent: 2
 - proto: TableReinforced
   entities:
-  - uid: 11565
-    components:
-    - type: Transform
-      pos: 16.5,43.5
-      parent: 2
-  - uid: 11566
-    components:
-    - type: Transform
-      pos: 15.5,43.5
-      parent: 2
   - uid: 11567
     components:
     - type: Transform
@@ -87247,27 +87172,6 @@ entities:
     components:
     - type: Transform
       pos: 41.567085,22.558064
-      parent: 2
-- proto: WeaponPistolUCS
-  entities:
-  - uid: 13870
-    components:
-    - type: Transform
-      pos: 15.471981,43.72094
-      parent: 2
-- proto: WeaponRifleUTAPM1
-  entities:
-  - uid: 13871
-    components:
-    - type: Transform
-      pos: 15.721981,43.34594
-      parent: 2
-- proto: WeaponShotgunGuardian
-  entities:
-  - uid: 13872
-    components:
-    - type: Transform
-      pos: 15.721981,43.455315
       parent: 2
 - proto: WeaponSubMachineGunP90
   entities:
