@@ -17067,18 +17067,6 @@ entities:
     - type: Transform
       pos: 52.61781,-27.622787
       parent: 2
-- proto: BoxLethalshot
-  entities:
-  - uid: 1064
-    components:
-    - type: Transform
-      pos: 6.5047703,-14.5763445
-      parent: 2
-  - uid: 1065
-    components:
-    - type: Transform
-      pos: 6.5047703,-14.465234
-      parent: 2
 - proto: BoxLightbulb
   entities:
   - uid: 1066
@@ -17119,20 +17107,6 @@ entities:
     components:
     - type: Transform
       pos: 0.97444147,20.461615
-      parent: 2
-- proto: BoxMagazinePistol
-  entities:
-  - uid: 1073
-    components:
-    - type: Transform
-      pos: 6.5047703,-14.618011
-      parent: 2
-- proto: BoxMagazineRifle
-  entities:
-  - uid: 1074
-    components:
-    - type: Transform
-      pos: 6.5203094,-14.524279
       parent: 2
 - proto: BoxMouthSwab
   entities:
@@ -57506,6 +57480,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: 6.515101,-13.394071
       parent: 2
+  - uid: 16899
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.620801,-14.514698
+      parent: 2
   - uid: 24848
     components:
     - type: Transform
@@ -69366,6 +69346,13 @@ entities:
     - type: Transform
       pos: 53.634144,-51.446053
       parent: 2
+- proto: DrinkKvassGlass
+  entities:
+  - uid: 1073
+    components:
+    - type: Transform
+      pos: 6.636615,-14.858499
+      parent: 2
 - proto: DrinkMugBlack
   entities:
   - uid: 10620
@@ -73859,6 +73846,13 @@ entities:
     components:
     - type: Transform
       pos: 21.70029,-26.388956
+      parent: 2
+- proto: FoodDonutHomer
+  entities:
+  - uid: 16909
+    components:
+    - type: Transform
+      pos: 6.3435917,-14.897561
       parent: 2
 - proto: FoodDonutJellyChocolate
   entities:
@@ -110278,6 +110272,13 @@ entities:
         - 0
         - 0
         - 0
+- proto: LuxuryPen
+  entities:
+  - uid: 1074
+    components:
+    - type: Transform
+      pos: 6.3045216,-14.534229
+      parent: 2
 - proto: MachineAnomalyGenerator
   entities:
   - uid: 16580
@@ -111679,6 +111680,11 @@ entities:
       parent: 2
 - proto: Paper
   entities:
+  - uid: 1065
+    components:
+    - type: Transform
+      pos: 6.7733583,-14.553761
+      parent: 2
   - uid: 16780
     components:
     - type: Transform
@@ -111959,8 +111965,23 @@ entities:
     - type: Transform
       pos: 22.482185,-34.511616
       parent: 2
+  - uid: 16907
+    components:
+    - type: Transform
+      pos: 6.4608,-14.299854
+      parent: 2
+  - uid: 16908
+    components:
+    - type: Transform
+      pos: 6.6170797,-14.436573
+      parent: 2
 - proto: PaperBin10
   entities:
+  - uid: 1064
+    components:
+    - type: Transform
+      pos: 6.5,-15.5
+      parent: 2
   - uid: 16836
     components:
     - type: Transform
@@ -112332,27 +112353,10 @@ entities:
     - type: InsideEntityStorage
 - proto: PlasmaReinforcedWindowDirectional
   entities:
-  - uid: 16897
-    components:
-    - type: Transform
-      pos: 6.5,-15.5
-      parent: 2
   - uid: 16898
     components:
     - type: Transform
       pos: 3.5,-13.5
-      parent: 2
-  - uid: 16899
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 6.5,-14.5
-      parent: 2
-  - uid: 16900
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,-15.5
       parent: 2
   - uid: 16901
     components:
@@ -112387,26 +112391,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 3.5,-15.5
-      parent: 2
-  - uid: 16907
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.5,-14.5
-      parent: 2
-- proto: PlasmaWindoorSecureArmoryLocked
-  entities:
-  - uid: 16908
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 6.5,-14.5
-      parent: 2
-  - uid: 16909
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 6.5,-15.5
       parent: 2
 - proto: PlasmaWindowDirectional
   entities:
@@ -130631,7 +130615,7 @@ entities:
   - uid: 19914
     components:
     - type: Transform
-      pos: 47.5,-17.5
+      pos: 48.5,-17.5
       parent: 2
 - proto: SpawnPointPassenger
   entities:
@@ -133521,6 +133505,18 @@ entities:
       tags: []
 - proto: Table
   entities:
+  - uid: 16897
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,-14.5
+      parent: 2
+  - uid: 16900
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,-15.5
+      parent: 2
   - uid: 20267
     components:
     - type: Transform
@@ -134895,16 +134891,6 @@ entities:
       parent: 24715
 - proto: TableReinforced
   entities:
-  - uid: 20533
-    components:
-    - type: Transform
-      pos: 6.5,-14.5
-      parent: 2
-  - uid: 20534
-    components:
-    - type: Transform
-      pos: 6.5,-15.5
-      parent: 2
   - uid: 20535
     components:
     - type: Transform
@@ -153121,30 +153107,6 @@ entities:
     components:
     - type: Transform
       pos: -24.492538,-0.47735587
-      parent: 2
-- proto: WeaponPistolUCS
-  entities:
-  - uid: 23833
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.4978256,-15.1944
-      parent: 2
-- proto: WeaponRifleUTAPM1
-  entities:
-  - uid: 23834
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.3381033,-15.124955
-      parent: 2
-- proto: WeaponShotgunGuardian
-  entities:
-  - uid: 23835
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 6.6228256,-14.993011
       parent: 2
 - proto: WeaponSubMachineGunP90
   entities:

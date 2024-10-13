@@ -11574,7 +11574,7 @@ entities:
       pos: 24.5,16.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -9821.47
+      secondsUntilStateChange: -9955.261
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -17192,16 +17192,6 @@ entities:
       parent: 2
     - type: BallisticAmmoProvider
       unspawnedCount: 12
-  - uid: 12716
-    components:
-    - type: Transform
-      pos: -20.803751,-13.395253
-      parent: 2
-  - uid: 12774
-    components:
-    - type: Transform
-      pos: -20.810696,-13.589698
-      parent: 2
 - proto: BoxLightbulb
   entities:
   - uid: 1239
@@ -17237,20 +17227,6 @@ entities:
     components:
     - type: Transform
       pos: -20.536755,-5.462179
-      parent: 2
-- proto: BoxMagazinePistolHighCapacity
-  entities:
-  - uid: 11483
-    components:
-    - type: Transform
-      pos: -20.477362,-13.395253
-      parent: 2
-- proto: BoxMagazineRifle
-  entities:
-  - uid: 11383
-    components:
-    - type: Transform
-      pos: -20.470417,-13.506364
       parent: 2
 - proto: BoxMouthSwab
   entities:
@@ -69000,6 +68976,12 @@ entities:
       parent: 2
 - proto: ComfyChair
   entities:
+  - uid: 5881
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -21.5,-13.5
+      parent: 2
   - uid: 10923
     components:
     - type: Transform
@@ -80715,6 +80697,13 @@ entities:
     - type: Transform
       pos: -33.51487,5.3832693
       parent: 2
+- proto: DrinkKvassGlass
+  entities:
+  - uid: 949
+    components:
+    - type: Transform
+      pos: -20.719702,-13.37671
+      parent: 2
 - proto: DrinkMugBlack
   entities:
   - uid: 12829
@@ -85135,6 +85124,20 @@ entities:
       tags: []
     - type: RefillableSolution
       solution: food
+- proto: FoodDonutMeat
+  entities:
+  - uid: 959
+    components:
+    - type: Transform
+      pos: -20.446213,-13.259522
+      parent: 2
+- proto: FoodDonutPlain
+  entities:
+  - uid: 156
+    components:
+    - type: Transform
+      pos: -20.2704,-13.37671
+      parent: 2
 - proto: FoodExtradimensionalOrange
   entities:
   - uid: 27026
@@ -124883,28 +124886,6 @@ entities:
       parent: 2
 - proto: PlasmaReinforcedWindowDirectional
   entities:
-  - uid: 3436
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -21.5,-13.5
-      parent: 2
-  - uid: 5881
-    components:
-    - type: Transform
-      pos: -21.5,-13.5
-      parent: 2
-  - uid: 5882
-    components:
-    - type: Transform
-      pos: -20.5,-13.5
-      parent: 2
-  - uid: 8028
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -20.5,-13.5
-      parent: 2
   - uid: 19185
     components:
     - type: Transform
@@ -124938,20 +124919,6 @@ entities:
     components:
     - type: Transform
       pos: 7.5224895,-74.49767
-      parent: 2
-- proto: PlasmaWindoorSecureArmoryLocked
-  entities:
-  - uid: 13252
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -20.5,-13.5
-      parent: 2
-  - uid: 25171
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -21.5,-13.5
       parent: 2
 - proto: PlasticFlapsAirtightClear
   entities:
@@ -146834,12 +146801,7 @@ entities:
       parent: 2
 - proto: TableReinforced
   entities:
-  - uid: 5890
-    components:
-    - type: Transform
-      pos: -21.5,-13.5
-      parent: 2
-  - uid: 5891
+  - uid: 3436
     components:
     - type: Transform
       pos: -20.5,-13.5
@@ -169152,27 +169114,6 @@ entities:
     components:
     - type: Transform
       pos: 21.462696,34.988297
-      parent: 2
-- proto: WeaponPistolUCS
-  entities:
-  - uid: 959
-    components:
-    - type: Transform
-      pos: -21.303751,-13.464698
-      parent: 2
-- proto: WeaponRifleUTAPM1
-  entities:
-  - uid: 949
-    components:
-    - type: Transform
-      pos: -21.164862,-13.423031
-      parent: 2
-- proto: WeaponShotgunGuardian
-  entities:
-  - uid: 156
-    components:
-    - type: Transform
-      pos: -21.037785,-13.350736
       parent: 2
 - proto: WeaponSubMachineGunP90
   entities:
