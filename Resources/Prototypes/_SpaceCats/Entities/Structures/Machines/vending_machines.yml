@@ -4,7 +4,6 @@
   suffix: Sponsor
   components:
   - type: VendingMachine
-    pack: PTechInventory
     offState: off
     brokenState: broken
     normalState: normal-unshaded
