@@ -65,4 +65,5 @@
   storage:
     back:
     - BlueShieldSetLoadouts
+    - BlueShieldSetMedical
     - CombatKnifeSpetsnaz
