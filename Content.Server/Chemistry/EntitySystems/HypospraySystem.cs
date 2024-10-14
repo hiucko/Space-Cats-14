@@ -11,6 +11,9 @@ using Content.Shared.Interaction.Events;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Timing;
 using Content.Shared.Weapons.Melee.Events;
+using Content.Shared.Clothing.EntitySystems;
+using Content.Shared.Inventory;
+using Content.Shared.Clothing.Components;
 using Content.Server.Interaction;
 using Content.Server.Body.Components;
 using Robust.Shared.GameStates;
@@ -25,6 +28,7 @@ public sealed class HypospraySystem : SharedHypospraySystem
 {
     [Dependency] private readonly AudioSystem _audio = default!;
     [Dependency] private readonly InteractionSystem _interaction = default!;
+    [Dependency] private readonly InventorySystem _invSystem = default!; // CATS EDIT
 
     public override void Initialize()
     {
@@ -110,6 +114,14 @@ public sealed class HypospraySystem : SharedHypospraySystem
             return false;
         }
 
+        // CATS START
+        if (HasInjectionProtection(target))
+        {
+            _popup.PopupEntity(Loc.GetString("hypospray-component-inject-target-protected"), target, user);
+            return false;
+        }
+        // CATS END
+
         _popup.PopupEntity(Loc.GetString(msgFormat ?? "hypospray-component-inject-other-message", ("other", target)), target, user);
 
         if (target != user)
@@ -185,6 +197,40 @@ public sealed class HypospraySystem : SharedHypospraySystem
             ("target", Identity.Entity(target, EntityManager))), entity.Owner, user);
         return true;
     }
+
+    // CATS START
+    private bool HasInjectionProtection(EntityUid entity)
+    {
+        // ClothingOuterHardsuitBase
+        // ClothingHeadHardsuitBase
+        // ClothingOuterEVASuitBase
+
+        if (TryComp(entity, out InventoryComponent? inv))
+        {
+            // We check the slot of the head and outer clothing
+            var requiredSlotFlags = new[] { SlotFlags.HEAD, SlotFlags.OUTERCLOTHING };
+
+            var relevantSlots = inv.Slots.Where(slot => requiredSlotFlags.Contains(slot.SlotFlags)).ToList();
+            if (relevantSlots.Count != requiredSlotFlags.Length)
+                return false;
+
+                foreach (var slotDef in relevantSlots)
+            {
+                if (_invSystem.TryGetSlotEntity(entity, slotDef.Name, out var slotEntity, inv))
+                {
+                    if (!TryComp(slotEntity, out InjectionProtectionComponent? item) || !item.HasInjectionProtection)
+                        return false;
+                }
+                else
+                    return false;
+            }
+            return true;
+        }
+
+
+        return false;
+    }
+    // CATS END
 
     private bool EligibleEntity(EntityUid entity, IEntityManager entMan, HyposprayComponent component)
     {
