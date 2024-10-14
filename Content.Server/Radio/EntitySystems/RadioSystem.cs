@@ -132,9 +132,11 @@ public sealed class RadioSystem : EntitySystem
         var name = evt.VoiceName;
         name = FormattedMessage.EscapeText(name);
 
+        // CATS START
         TryComp<MindContainerComponent>(messageSource, out var mind);
         var role = _jobs.MindTryGetJobName(mind?.Mind);
         if (role != null){ name += ", " + role; }
+        // CATS END
         SpeechVerbPrototype speech;
         if (evt.SpeechVerb != null && _prototype.TryIndex(evt.SpeechVerb, out var evntProto))
             speech = evntProto;
