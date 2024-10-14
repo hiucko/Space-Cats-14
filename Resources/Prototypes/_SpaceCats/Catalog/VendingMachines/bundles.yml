@@ -2,7 +2,7 @@
   id: NaborSponsornventory
   productEntity: gearbundletoolbeltfilled
   cost:
-    SpaceCash: 200
+    SpaceCash: 1500
   categories:
     - Nabor
   conditions:
@@ -13,7 +13,7 @@
   id: NaborSponsornventory1
   productEntity: gearbundleeva
   cost:
-    SpaceCash: 200
+    SpaceCash: 1500
   categories:
     - Nabor
   conditions:
@@ -24,7 +24,7 @@
   id: NaborSponsornventory2
   productEntity: gearbundlehardsuitbasic
   cost:
-    SpaceCash: 200
+    SpaceCash: 1500
   categories:
     - Nabor
   conditions:
@@ -35,7 +35,7 @@
   id: NaborSponsornventory3
   productEntity: gearbundlehardsuitspatio
   cost:
-    SpaceCash: 200
+    SpaceCash: 1500
   categories:
     - Nabor
   conditions:
@@ -46,7 +46,7 @@
   id: NaborSponsornventory4
   productEntity: gearbundlehardsuitpilot
   cost:
-    SpaceCash: 200
+    SpaceCash: 1500
   categories:
     - Nabor
   conditions:
@@ -57,7 +57,7 @@
   id: NaborSponsornventory5
   productEntity: gearbundlehardsuitparamedic
   cost:
-    SpaceCash: 200
+    SpaceCash: 1500
   categories:
     - Nabor
   conditions:
@@ -68,7 +68,7 @@
   id: NaborSponsornventory6
   productEntity: gearbundlemedic
   cost:
-    SpaceCash: 200
+    SpaceCash: 1500
   categories:
     - Nabor
   conditions:
@@ -79,7 +79,7 @@
   id: NaborSponsornventory7
   productEntity: gearbundlefirstaid
   cost:
-    SpaceCash: 100
+    SpaceCash: 1000
   categories:
     - Nabor
   conditions:
@@ -90,7 +90,7 @@
   id: NaborSponsornventory8
   productEntity: gearbundlesalvagerbasic
   cost:
-    SpaceCash: 200
+    SpaceCash: 1000
   categories:
     - Nabor
   conditions:
@@ -101,7 +101,7 @@
   id: NaborSponsornventory9
   productEntity: gearbundlesalvageradvanced
   cost:
-    SpaceCash: 200
+    SpaceCash: 1500
   categories:
     - Nabor
   conditions:
@@ -112,7 +112,7 @@
   id: NaborSponsornventory10
   productEntity: gearbundlebotanist
   cost:
-    SpaceCash: 200
+    SpaceCash: 1000
   categories:
     - Nabor
   conditions:
@@ -123,7 +123,7 @@
   id: NaborSponsornventory11
   productEntity: gearbundleshotgun
   cost:
-    SpaceCash: 300
+    SpaceCash: 2500
   categories:
     - Nabor
   conditions:
@@ -134,7 +134,7 @@
   id: NaborSponsornventory12
   productEntity: gearbundlemosin
   cost:
-    SpaceCash: 300
+    SpaceCash: 2500
   categories:
     - Nabor
   conditions:
