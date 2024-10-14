@@ -13,8 +13,8 @@
   - type: Advertise
     pack: AmmoVendAds
   - type: Sprite
-    noRot: true
     sprite: _SpaceCats/Structures/Machines/VendingMachines/nabormat.rsi
+    noRot: true
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
