@@ -118,6 +118,7 @@
   - type: HeldSpeedModifier
   - type: Item
     size: Ginormous
+  - type: InjectionProtection # CATS EDIT
   - type: Armor
     modifiers:
       coefficients:
@@ -164,6 +165,7 @@
     walkModifier: 0.8
     sprintModifier: 0.8
   - type: HeldSpeedModifier
+  - type: InjectionProtection # CATS EDIT
   - type: Item
     size: Huge
   - type: Tag
