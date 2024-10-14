@@ -32,7 +32,7 @@
     sprite: _SpaceCats/Objects/Specific/Medical/hypomini.rsi
     state: medivend_hypo
   - type: Item
-    sprite: Objects/Specific/Medical/hypomini.rsi
+    sprite: Objects/Specific/Medical/hypospray.rsi
   - type: SolutionContainerManager
     solutions:
       hypospray:
