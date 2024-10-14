@@ -396,6 +396,10 @@
     spread: 75
     reflects:
       - Energy
+  - type: Construction # CATS EDIT
+    deconstructionTarget: null
+    graph: EnergyDoubleSwordGraph
+    node: desword
   - type: MeleeBlock # CATS EDIT
     delay: 3.1
   # Corvax-HiddenDesc-Start
@@ -417,10 +421,6 @@
     - label: corvax-hidden-desc-EnergySword-cargo
       jobRequired:
       - SalvageSpecialist
-    - type: Construction # CATS EDIT
-      deconstructionTarget: null
-      graph: EnergyDoubleSwordGraph
-      node: desword
   # Corvax-HiddenDesc-End
 
 - type: entity
