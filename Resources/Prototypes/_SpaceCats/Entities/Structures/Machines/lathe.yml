@@ -111,7 +111,6 @@
   parent: Protolathe
   name: protolathe
   description: Converts raw materials into useful objects.
-  noSpawn: false
   components:
   - type: Sprite
     sprite: _SpaceCats/Structures/Machines/protolatheRnD.rsi
@@ -132,7 +131,6 @@
   parent: Protolathe
   name: protolathe
   description: Converts raw materials into useful objects.
-  noSpawn: false
   components:
   - type: Sprite
     sprite: _SpaceCats/Structures/Machines/protolatheService.rsi
@@ -153,7 +151,6 @@
   parent: Protolathe
   name: protolathe
   description: Converts raw materials into useful objects.
-  noSpawn: false
   components:
   - type: Sprite
     sprite: _SpaceCats/Structures/Machines/protolatheENG.rsi
@@ -174,7 +171,6 @@
   parent: Protolathe
   name: protolathe
   description: Converts raw materials into useful objects.
-  noSpawn: false
   components:
   - type: Sprite
     sprite: _SpaceCats/Structures/Machines/protolatheCargo.rsi
