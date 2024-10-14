@@ -175,7 +175,7 @@
   id: Throngler
   description: Why would you make this?
   components:
-  - type: BackStab
+    - type: BackStab
     - type: Sprite
       sprite: Objects/Weapons/Melee/Throngler2.rsi
     - type: MeleeWeapon
