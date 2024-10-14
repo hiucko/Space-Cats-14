@@ -98,7 +98,7 @@
       stock: 2
 
 - type: listing
-  id: AccessoriesSponsornventory9
+  id: AccessoriesSponsornventory10
   productEntity: ClothingNeckCloakMoth  
   cost:
     PrizeTicketBase: 600
@@ -109,7 +109,7 @@
       stock: 2
 
 - type: listing
-  id: AccessoriesSponsornventory10
+  id: AccessoriesSponsornventory11
   productEntity: ClothingNeckCloakVoid 
   cost:
     PrizeTicketBase: 900
@@ -120,7 +120,7 @@
       stock: 2
 
 - type: listing
-  id: AccessoriesSponsornventory11
+  id: AccessoriesSponsornventory12
   productEntity: ClothingNeckCloakTrans  
   cost:
     PrizeTicketBase: 1200
