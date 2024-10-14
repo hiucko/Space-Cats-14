@@ -1,0 +1,143 @@
+- type: listing
+  id: NaborSponsornventory
+  productEntity: gearbundletoolbeltfilled
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory1
+  productEntity: gearbundleeva
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory2
+  productEntity: gearbundlehardsuitbasic
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory3
+  productEntity: gearbundlehardsuitspatio
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory4
+  productEntity: gearbundlehardsuitpilot
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory5
+  productEntity: gearbundlehardsuitparamedic
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory6
+  productEntity: gearbundlemedic
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory7
+  productEntity: gearbundlefirstaid
+  cost:
+    PrizeTicketBase: 100
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory8
+  productEntity: gearbundlesalvagerbasic
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory9
+  productEntity: gearbundlesalvageradvanced
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory10
+  productEntity: gearbundlebotanist
+  cost:
+    PrizeTicketBase: 200
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory11
+  productEntity: gearbundleshotgun
+  cost:
+    PrizeTicketBase: 300
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: NaborSponsornventory12
+  productEntity: gearbundlemosin
+  cost:
+    PrizeTicketBase: 300
+  categories:
+    - Nabor
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
