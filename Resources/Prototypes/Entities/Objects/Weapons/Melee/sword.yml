@@ -27,6 +27,7 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Melee/captain_sabre.rsi
+  - type: BackStab
   - type: MeleeWeapon
     attackRate: 1.5
     damage:
@@ -55,6 +56,7 @@
   id: Katana
   description: Ancient craftwork made with not so ancient plasteel.
   components:
+  - type: BackStab
   - type: Tag
     tags:
     - Katana
@@ -76,6 +78,7 @@
   id: EnergyKatana
   description: A katana infused with strong energy.
   components:
+  - type: BackStab
   - type: Sprite
     sprite: Objects/Weapons/Melee/energykatana.rsi
   - type: MeleeWeapon
@@ -105,6 +108,7 @@
   id: Machete
   description: A large, vicious looking blade.
   components:
+  - type: BackStab
   - type: Tag
     tags:
     - Machete
@@ -126,6 +130,7 @@
   id: Claymore
   description: An ancient war blade.
   components:
+  - type: BackStab
   - type: Sprite
     sprite: Objects/Weapons/Melee/claymore.rsi
   - type: MeleeWeapon
@@ -148,6 +153,7 @@
   id: Cutlass
   description: A wickedly curved blade, often seen in the hands of space pirates.
   components:
+  - type: BackStab
   - type: Tag
     tags:
     - Machete
@@ -169,6 +175,7 @@
   id: Throngler
   description: Why would you make this?
   components:
+  - type: BackStab
     - type: Sprite
       sprite: Objects/Weapons/Melee/Throngler2.rsi
     - type: MeleeWeapon
