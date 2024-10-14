@@ -29,7 +29,7 @@
   id: HypoExperement
   components:
   - type: Sprite
-    sprite: _SpaceCats/Objects/Specific/Medical/hypomini.rsi
+    sprite: _SpaceCats/Objects/Specific/Medical/hypocivial.rsi
     state: medivend_hypo
   - type: Item
     sprite: Objects/Specific/Medical/hypospray.rsi

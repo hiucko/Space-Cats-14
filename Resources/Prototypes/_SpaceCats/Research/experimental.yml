@@ -2,7 +2,7 @@
   id: HypoImplant
   name: research-technology-hypo
   icon:
-    sprite: _SpaceCats/Objects/Specific/Medical/hypomini.rsi
+    sprite: _SpaceCats/Objects/Specific/Medical/hypocivial.rsi
     state: medivend_hypo
   discipline: Experimental
   tier: 2
