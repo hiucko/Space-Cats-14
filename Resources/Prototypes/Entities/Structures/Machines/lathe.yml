@@ -362,6 +362,7 @@
       - DeviceQuantumSpinInverter
       - EnergyDomeDirectionalTurtle # Cats energy_barrier
       - HypoExperement # Cats
+      - ExperemetalTeleporter
 # start-backmen: languages
       - CanilunztTranslator
       - BubblishTranslator
