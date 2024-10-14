@@ -392,7 +392,7 @@
     size: Small
     sprite: Objects/Weapons/Melee/e_sword_double-inhands.rsi
   - type: Reflect # CATS EDIT
-    reflectProb: .5
+    reflectProb: .6
     spread: 75
     reflects:
       - Energy
