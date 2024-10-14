@@ -21,7 +21,7 @@
       stock: 2
 
 - type: listing
-  id: AccessoriesSponsornventory2
+  id: AccessoriesSponsornventory3
   productEntity: ClothingHeadHatSkub
   cost:
     PrizeTicketBase: 300
@@ -32,7 +32,7 @@
       stock: 2
 
 - type: listing
-  id: AccessoriesSponsornventory2
+  id: AccessoriesSponsornventory4
   productEntity: ClothingHeadHatDogEars
   cost:
     PrizeTicketBase: 1200
@@ -43,7 +43,7 @@
       stock: 2
 
 - type: listing
-  id: AccessoriesSponsornventory2
+  id: AccessoriesSponsornventory5
   productEntity: ClothingHeadHatSquid
   cost:
     PrizeTicketBase: 400
@@ -54,7 +54,7 @@
       stock: 2
 
 - type: listing
-  id: AccessoriesSponsornventory2
+  id: AccessoriesSponsornventory6
   productEntity: ClothingHeadHatRedRacoon
   cost:
     PrizeTicketBase: 500
@@ -65,10 +65,65 @@
       stock: 2
 
 - type: listing
-  id: AccessoriesSponsornventory2
+  id: AccessoriesSponsornventory7
   productEntity: ClothingHeadHatFancyCrown 
   cost:
     PrizeTicketBase: 2000
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory8
+  productEntity: ClothingNeckCloakHerald  
+  cost:
+    PrizeTicketBase: 600
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory9
+  productEntity: ClothingNeckCloakMiner  
+  cost:
+    PrizeTicketBase: 600
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory9
+  productEntity: ClothingNeckCloakMoth  
+  cost:
+    PrizeTicketBase: 600
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory10
+  productEntity: ClothingNeckCloakVoid 
+  cost:
+    PrizeTicketBase: 900
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory11
+  productEntity: ClothingNeckCloakTrans  
+  cost:
+    PrizeTicketBase: 1200
   categories:
     - Accessories
   conditions:
