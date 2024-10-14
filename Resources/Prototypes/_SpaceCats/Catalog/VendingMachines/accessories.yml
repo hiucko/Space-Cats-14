@@ -2,7 +2,7 @@
   id: AccessoriesSponsornventory
   productEntity: ClothingHeadHatBunny
   cost:
-    PrizeTicketBase: 300
+    SpaceCash: 300
   categories:
     - Accessories
   conditions:
@@ -11,9 +11,9 @@
 
 - type: listing
   id: AccessoriesSponsornventory1
-  productEntity: СlothingHeadHatCatEars
+  productEntity: ClothingHeadHatCatEars
   cost:
-    PrizeTicketBase: 1200
+    SpaceCash: 1200
   categories:
     - Accessories
   conditions:
@@ -24,7 +24,7 @@
   id: AccessoriesSponsornventory3
   productEntity: ClothingHeadHatSkub
   cost:
-    PrizeTicketBase: 300
+    SpaceCash: 300
   categories:
     - Accessories
   conditions:
@@ -35,7 +35,7 @@
   id: AccessoriesSponsornventory4
   productEntity: ClothingHeadHatDogEars
   cost:
-    PrizeTicketBase: 1200
+    SpaceCash: 1200
   categories:
     - Accessories
   conditions:
@@ -46,7 +46,7 @@
   id: AccessoriesSponsornventory5
   productEntity: ClothingHeadHatSquid
   cost:
-    PrizeTicketBase: 400
+    SpaceCash: 400
   categories:
     - Accessories
   conditions:
@@ -57,7 +57,7 @@
   id: AccessoriesSponsornventory6
   productEntity: ClothingHeadHatRedRacoon
   cost:
-    PrizeTicketBase: 500
+    SpaceCash: 500
   categories:
     - Accessories
   conditions:
@@ -68,7 +68,7 @@
   id: AccessoriesSponsornventory7
   productEntity: ClothingHeadHatFancyCrown 
   cost:
-    PrizeTicketBase: 2000
+    SpaceCash: 2000
   categories:
     - Accessories
   conditions:
@@ -79,7 +79,7 @@
   id: AccessoriesSponsornventory8
   productEntity: ClothingNeckCloakHerald  
   cost:
-    PrizeTicketBase: 600
+    SpaceCash: 600
   categories:
     - Accessories
   conditions:
@@ -90,7 +90,7 @@
   id: AccessoriesSponsornventory9
   productEntity: ClothingNeckCloakMiner  
   cost:
-    PrizeTicketBase: 600
+    SpaceCash: 600
   categories:
     - Accessories
   conditions:
@@ -101,7 +101,7 @@
   id: AccessoriesSponsornventory10
   productEntity: ClothingNeckCloakMoth  
   cost:
-    PrizeTicketBase: 600
+    SpaceCash: 600
   categories:
     - Accessories
   conditions:
@@ -112,7 +112,7 @@
   id: AccessoriesSponsornventory11
   productEntity: ClothingNeckCloakVoid 
   cost:
-    PrizeTicketBase: 900
+    SpaceCash: 900
   categories:
     - Accessories
   conditions:
@@ -123,7 +123,7 @@
   id: AccessoriesSponsornventory12
   productEntity: ClothingNeckCloakTrans  
   cost:
-    PrizeTicketBase: 1200
+    SpaceCash: 1200
   categories:
     - Accessories
   conditions:

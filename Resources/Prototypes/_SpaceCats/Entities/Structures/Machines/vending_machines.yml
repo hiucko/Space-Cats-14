@@ -30,7 +30,6 @@
       - Accessories
     currencyWhitelist:
       - SpaceCash
-      - PrizeTicketBase
     balance:
       SpaceCash: 0
   - type: ActivatableUI

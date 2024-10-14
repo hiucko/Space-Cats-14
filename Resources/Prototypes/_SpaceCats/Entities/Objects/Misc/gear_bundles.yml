@@ -107,7 +107,6 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: ClothingOuterHardsuitPilot
       - id: AirTankFilled
       - id: ClothingShoesBootsMag
       - id: JetpackMiniFilled
@@ -196,7 +195,6 @@
       - id: Brutepack
       - id: Ointment
       - id: Gauze
-      - id: MedicalTrackingImplanter
       - id: pillcanisterfirstaid
     sound:
       path: /Audio/Effects/teleport_arrival.ogg
