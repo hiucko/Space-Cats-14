@@ -5,3 +5,7 @@
 - type: storeCategory
   id: Nabor
   name: store-category-vending-nabor
+
+- type: storeCategory
+  id: Accessories
+  name: store-category-vending-accessories

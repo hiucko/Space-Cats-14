@@ -1,0 +1,76 @@
+- type: listing
+  id: AccessoriesSponsornventory
+  productEntity: ClothingHeadHatBunny
+  cost:
+    PrizeTicketBase: 300
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory1
+  productEntity: СlothingHeadHatCatEars
+  cost:
+    PrizeTicketBase: 1200
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory2
+  productEntity: ClothingHeadHatSkub
+  cost:
+    PrizeTicketBase: 300
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory2
+  productEntity: ClothingHeadHatDogEars
+  cost:
+    PrizeTicketBase: 1200
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory2
+  productEntity: ClothingHeadHatSquid
+  cost:
+    PrizeTicketBase: 400
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory2
+  productEntity: ClothingHeadHatRedRacoon
+  cost:
+    PrizeTicketBase: 500
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
+
+- type: listing
+  id: AccessoriesSponsornventory2
+  productEntity: ClothingHeadHatFancyCrown 
+  cost:
+    PrizeTicketBase: 2000
+  categories:
+    - Accessories
+  conditions:
+    - !type:ListingLimitedStockCondition
+      stock: 2
