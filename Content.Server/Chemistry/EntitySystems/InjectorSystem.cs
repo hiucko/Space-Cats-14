@@ -1,4 +1,3 @@
-using System.Linq;
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Shared.Chemistry;
@@ -14,8 +13,6 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Stacks;
-using Content.Shared.Clothing.Components;
-using Content.Shared.Inventory;
 
 namespace Content.Server.Chemistry.EntitySystems;
 
@@ -23,7 +20,6 @@ public sealed class InjectorSystem : SharedInjectorSystem
 {
     [Dependency] private readonly BloodstreamSystem _blood = default!;
     [Dependency] private readonly ReactiveSystem _reactiveSystem = default!;
-    [Dependency] private readonly InventorySystem _invSystem = default!; // CATS EDIT
 
     public override void Initialize()
     {
@@ -74,15 +70,8 @@ public sealed class InjectorSystem : SharedInjectorSystem
 
     private void OnInjectDoAfter(Entity<InjectorComponent> entity, ref InjectorDoAfterEvent args)
     {
-
         if (args.Cancelled || args.Handled || args.Args.Target == null)
             return;
-
-        if (HasInjectionProtection(args.Args.Target.Value))
-        {
-            Popup.PopupEntity(Loc.GetString("injector-component-inject-target-protected"), args.Args.Target.Value, args.Args.User);
-            return;
-        }
 
         args.Handled = TryUseInjector(entity, args.Args.Target.Value, args.Args.User);
     }
@@ -102,15 +91,6 @@ public sealed class InjectorSystem : SharedInjectorSystem
             // Are use using an injector capible of targeting a mob?
             if (entity.Comp.IgnoreMobs)
                 return;
-
-            // CATS START
-            if (HasInjectionProtection(target))
-            {
-                Popup.PopupEntity(Loc.GetString("injector-component-inject-target-protected"), target, args.User);
-                return;
-
-            }
-            // CATS END
 
             InjectDoAfter(entity, target, args.User);
             args.Handled = true;
@@ -405,14 +385,14 @@ public sealed class InjectorSystem : SharedInjectorSystem
     private void DrawFromBlood(Entity<InjectorComponent> injector, Entity<BloodstreamComponent> target,
         Entity<SolutionComponent> injectorSolution, FixedPoint2 transferAmount, EntityUid user)
     {
-        var drawAmount = (float)transferAmount;
+        var drawAmount = (float) transferAmount;
 
         if (SolutionContainers.ResolveSolution(target.Owner, target.Comp.ChemicalSolutionName,
                 ref target.Comp.ChemicalSolution))
         {
             var chemTemp = SolutionContainers.SplitSolution(target.Comp.ChemicalSolution.Value, drawAmount * 0.15f);
             SolutionContainers.TryAddSolution(injectorSolution, chemTemp);
-            drawAmount -= (float)chemTemp.Volume;
+            drawAmount -= (float) chemTemp.Volume;
         }
 
         if (SolutionContainers.ResolveSolution(target.Owner, target.Comp.BloodSolutionName,
@@ -429,38 +409,4 @@ public sealed class InjectorSystem : SharedInjectorSystem
         Dirty(injector);
         AfterDraw(injector, target);
     }
-
-    // CATS START
-    private bool HasInjectionProtection(EntityUid entity)
-    {
-        // ClothingOuterHardsuitBase
-        // ClothingHeadHardsuitBase
-        // ClothingOuterEVASuitBase
-
-        if (TryComp(entity, out InventoryComponent? inv))
-        {
-            // We check the slot of the head and outer clothing
-            var requiredSlotFlags = new[] { SlotFlags.HEAD, SlotFlags.OUTERCLOTHING };
-
-            var relevantSlots = inv.Slots.Where(slot => requiredSlotFlags.Contains(slot.SlotFlags)).ToList();
-            if (relevantSlots.Count != requiredSlotFlags.Length)
-                return false;
-
-                foreach (var slotDef in relevantSlots)
-            {
-                if (_invSystem.TryGetSlotEntity(entity, slotDef.Name, out var slotEntity, inv))
-                {
-                    if (!TryComp(slotEntity, out InjectionProtectionComponent? item) || !item.HasInjectionProtection)
-                        return false;
-                }
-                else
-                    return false;
-            }
-            return true;
-        }
-
-
-        return false;
-    }
-    // CATS END
 }
