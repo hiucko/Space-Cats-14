@@ -108,7 +108,6 @@
   - type: BreathMask
   - type: Item
     size: Normal
-  - type: InjectionProtection # CATS EDIT
   - type: PressureProtection
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
@@ -146,7 +145,6 @@
     state: icon # default state used by most inheritors
   - type: Clickable
   - type: InteractionOutline
-  - type: InjectionProtection # CATS EDIT
   - type: Clothing
     #Apparently the hardsuit helmet equip sound is from a walking mech?
     equipSound: /Audio/Mecha/mechmove03.ogg
