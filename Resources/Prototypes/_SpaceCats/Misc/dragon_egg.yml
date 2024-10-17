@@ -82,3 +82,12 @@
     lifetime: 3.5
   - type: TransferMindOnDespawn
     entityPrototype: MobDragonPet
+  - type: LanguageSpeaker #backmen: languages
+    currentLanguage: Carp
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Carp
+    - Dragon
+    understands:
+    - Carp
+    - Dragon
