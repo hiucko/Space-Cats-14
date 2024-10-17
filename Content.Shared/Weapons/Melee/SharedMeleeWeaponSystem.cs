@@ -21,7 +21,6 @@ using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
-using Content.Shared.Tag; // cats-shield
 using Robust.Shared.Map;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
@@ -48,7 +47,6 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
     [Dependency] private   readonly SharedPhysicsSystem     _physics         = default!;
     [Dependency] private   readonly IPrototypeManager       _protoManager    = default!;
     [Dependency] private   readonly StaminaSystem           _stamina         = default!;
-    [Dependency] private readonly TagSystem _tagSystem = default!; // cats-shield
 
     private const int AttackMask = (int) (CollisionGroup.MobMask | CollisionGroup.Opaque);
 
@@ -562,7 +560,6 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         var damage = GetDamage(meleeUid, user, component);
         var entities = GetEntityList(ev.Entities);
         
-        entities = entities.Where(e => !_tagSystem.HasTag(e, "IgnoreMelee")).ToList(); //cats-shield
 
         if (entities.Count == 0)
         {
@@ -613,11 +610,6 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
                 !damageQuery.HasComponent(entity))
                 continue;
             
-            //cats shield start
-            if (_tagSystem.HasTag(entity, "IgnoreMelee"))
-                continue;
-            //cats shield end
-
             targets.Add(entity);
         }
 

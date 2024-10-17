@@ -823,9 +823,6 @@
 
 - type: Tag
   id: Igniter
-
-- type: Tag
-  id: IgnoreMelee
   
 - type: Tag
   id: Ingredient
