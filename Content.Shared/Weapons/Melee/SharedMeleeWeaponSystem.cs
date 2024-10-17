@@ -701,12 +701,9 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         for (var i = 0; i < increments; i++)
         {
             var castAngle = new Angle(baseAngle + increment * i);
-            //cats shield start
-            var ray = new CollisionRay(position, castAngle.ToWorldVec(), AttackMask);
-            var res = _physics.IntersectRay(mapId, ray, range, ignore, false)
-                .Where(x => !_tagSystem.HasTag(x.HitEntity, "IgnoreMelee"))
-                .ToList();
-            //cats shield end
+            var res = _physics.IntersectRay(mapId,
+                new CollisionRay(position, castAngle.ToWorldVec(),
+                    AttackMask), range, ignore, false).ToList();
 
             if (res.Count != 0)
             {
