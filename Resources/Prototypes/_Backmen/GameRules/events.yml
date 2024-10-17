@@ -85,23 +85,6 @@
     - type: NoosphericStormRule
 
 - type: entity
-  id: BlobSpawn
-  parent: BaseGameRule
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StationEvent
-    weight: 6.5
-    duration: 1
-    earliestStart: 50
-    minimumPlayers: 10
-    maxOccurrences: 1 # can only happen once per round
-  - type: BlobSpawnRule
-    carrierBlobProtos:
-    - SpawnPointGhostBlobRat
-    playersPerCarrierBlob: 30
-    maxCarrierBlob: 2
-
-- type: entity
   id: BluespaceGoat
   parent: BaseGameRule
   categories: [ HideSpawnMenu ]

@@ -360,6 +360,7 @@
       - FauxTileAstroSnow
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
+      - EnergyDomeDirectionalTurtle # cats-shield energy_barrier
       - HypoExperement # Cats
 # start-backmen: languages
       - CanilunztTranslator

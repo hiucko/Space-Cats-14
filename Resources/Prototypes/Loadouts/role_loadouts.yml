@@ -128,6 +128,7 @@
   - CommonBackpack
   - Glasses
   - Medals #backmen
+  - Survival
   - Inventory # Corvax-Loadouts
   - Trinkets
   - GroupSpeciesBreathTool
@@ -439,6 +440,7 @@
   - SecurityPocket #Backmen
   - SecurityPocket2 #Backmen
   - Medals #backmen
+  - SurvivalSecurity
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
@@ -468,6 +470,7 @@
   - SecurityCadetJumpsuit
   - SecurityBackpack
   - Medals #backmen
+  - SurvivalSecurity
   - Trinkets
   - GroupSpeciesBreathToolSecurity
 
@@ -566,6 +569,7 @@
   - CommonBackpack
   - Glasses
   - Medals #backmen
+  - Survival
   - Trinkets
   - GroupSpeciesBreathTool
 
