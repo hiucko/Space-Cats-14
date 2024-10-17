@@ -609,3 +609,6 @@ GunSafeLaserCarbine: GunSafeLaserCarbineUEG
 ShotGunCabinetFilled: ShotGunCabinetFilledBackmen
 ShotGunCabinetFilledOpen: ShotGunCabinetFilledOpenBackmen
 
+# 2024-10-07 Space Cats
+AirlockHydroponicsLocked: AirlockHydroGlassLocked
+AirlockHydroponics: AirlockHydroponicsGlass

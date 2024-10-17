@@ -1,0 +1,23 @@
+- type: technology
+  id: HypoImplant
+  name: research-technology-hypo
+  icon:
+    sprite: _SpaceCats/Objects/Specific/Medical/hypocivial.rsi
+    state: medivend_hypo
+  discipline: Experimental
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - HypoExperement
+
+- type: technology
+  id: ExperemetalTeleporter
+  name: research-technology-experemetalteleporter
+  icon:
+    sprite: _SpaceCats/Objects/Devices/experemenal_teleporter.rsi
+    state: hand_tele_recharging
+  discipline: Experimental
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - ExperemetalTeleporter
