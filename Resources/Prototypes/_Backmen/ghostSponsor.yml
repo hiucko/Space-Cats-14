@@ -184,7 +184,7 @@
 
 - type: ghostTheme
   id: tier12
-  name: sponsor-win-manager-ghost-tier012
+  name: sponsor-win-manager-ghost-tier12
   components:
     - type: Sprite
       noRot: true
