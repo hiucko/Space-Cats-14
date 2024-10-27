@@ -139,7 +139,9 @@
         shader: unshaded
 
 ############################ space cats gost
+
 - type: ghostTheme
+  name: sponsor-win-manager-ghost-tier09
   id: tier09  
   components:
     - type: Sprite
@@ -153,7 +155,8 @@
         shader: unshaded
 
 - type: ghostTheme
-  id: tier10  
+  id: tier10
+  name: sponsor-win-manager-ghost-tier10
   components:
     - type: Sprite
       noRot: true
@@ -166,7 +169,8 @@
         shader: unshaded
 
 - type: ghostTheme
-  id: tier11  
+  id: tier11
+  name: sponsor-win-manager-ghost-tier11
   components:
     - type: Sprite
       noRot: true
@@ -179,7 +183,8 @@
         shader: unshaded
 
 - type: ghostTheme
-  id: tier12  
+  id: tier12
+  name: sponsor-win-manager-ghost-tier012
   components:
     - type: Sprite
       noRot: true
@@ -192,7 +197,8 @@
         shader: unshaded
 
 - type: ghostTheme
-  id: tier13  
+  id: tier13
+  name: sponsor-win-manager-ghost-tier13
   components:
     - type: Sprite
       noRot: true
@@ -205,7 +211,8 @@
         shader: unshaded
 
 - type: ghostTheme
-  id: tier14  
+  id: tier14
+  name: sponsor-win-manager-ghost-tier14
   components:
     - type: Sprite
       noRot: true
