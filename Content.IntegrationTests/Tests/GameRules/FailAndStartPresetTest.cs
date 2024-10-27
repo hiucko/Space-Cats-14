@@ -18,7 +18,7 @@ public sealed class FailAndStartPresetTest
   alias:
     - nukeops
   name: Test Preset
-  description: """"
+  description: """" 
   showInVote: false
   rules:
   - TestRule
@@ -28,7 +28,7 @@ public sealed class FailAndStartPresetTest
   alias:
     - nukeops
   name: Test Preset 10 players
-  description: """"
+  description: """" 
   showInVote: false
   rules:
   - TestRuleTenPlayers
@@ -140,13 +140,16 @@ public sealed class TestRuleSystem : EntitySystem
             return;
 
         var query = EntityQueryEnumerator<TestRuleComponent, GameRuleComponent>();
-        while (query.MoveNext(out _, out _, out var gameRule))
+        while (query.MoveNext(out var uid, out _, out var gameRule))
         {
             var minPlayers = gameRule.MinPlayers;
             if (!gameRule.CancelPresetOnTooFewPlayers)
                 continue;
             if (args.Players.Length >= minPlayers)
                 continue;
+
+            var expectedPlayers = minPlayers;
+            Logger.Warning($"Round start cancelled. Expected at least {expectedPlayers} players, but got {args.Players.Length}. UID of the game rule: {uid}.");
 
             args.Cancel();
         }
