@@ -5,7 +5,7 @@
   price: 10000
   category: Small
   group: Salvage
-  shuttlePath: Maps/SpaceCats/Shuttles/SalvageHearseMrIzo.yml
+  shuttlePath: /Maps/SpaceCats/Shuttles/SalvageHearseMrIzo.yml
 
 - type: vessel
   id: SalvageTrawl
@@ -14,7 +14,7 @@
   price: 10000
   category: Small
   group: Salvage
-  shuttlePath: Maps/SpaceCats/Shuttles/SalvageTrawlMrIzo.yml
+  shuttlePath: /Maps/SpaceCats/Shuttles/SalvageTrawlMrIzo.yml
 
 - type: vessel
   id: SalvageShell
@@ -23,7 +23,7 @@
   price: 15000
   category: Small
   group: Salvage
-  shuttlePath: Maps/SpaceCats/Shuttles/SalvageShellMrIzo.yml
+  shuttlePath: /Maps/SpaceCats/Shuttles/SalvageShellMrIzo.yml
 
 - type: vessel
   id: SalvageSantaMaria
@@ -32,7 +32,7 @@
   price: 25000
   category: Small
   group: Salvage
-  shuttlePath: Maps/SpaceCats/Shuttles/SalvageSantaMariaMrIzo.yml
+  shuttlePath: /Maps/SpaceCats/Shuttles/SalvageSantaMariaMrIzo.yml
 
 - type: vessel
   id: SalvageMarkShader
@@ -41,4 +41,4 @@
   price: 40000
   category: Small
   group: Salvage
-  shuttlePath: Maps/SpaceCats/Shuttles/SalvageMarkShaderMrIzo.yml
+  shuttlePath: /Maps/SpaceCats/Shuttles/SalvageMarkShaderMrIzo.yml
