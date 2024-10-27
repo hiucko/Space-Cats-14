@@ -1,44 +1,44 @@
 - type: vessel
   id: SalvageHearse
-  name: Private Transport Shuttle
-  description: A private transport vessel for up to 6 passengers.
+  name: NT-Salv-"Катафалк" №3
+  description: Утилизаторский шаттл
   price: 10000
   category: Small
-  group: Specialist
+  group: Salvage
   shuttlePath: Maps/SpaceCats/Shuttles/SalvageHearseMrIzo.yml
 
 - type: vessel
-  id: SalvageMarkShader
-  name: Private Transport Shuttle
-  description: A private transport vessel for up to 6 passengers.
-  price: 40000
+  id: SalvageTrawl
+  name: NT-Carg-"Трал" №19
+  description: Утилизаторский шаттл
+  price: 10000
   category: Small
-  group: Specialist
-  shuttlePath: Maps/SpaceCats/Shuttles/SalvageMarkShaderMrIzo.yml
+  group: Salvage
+  shuttlePath: Maps/SpaceCats/Shuttles/SalvageTrawlMrIzo.yml
 
 - type: vessel
   id: SalvageShell
-  name: Private Transport Shuttle
-  description: A private transport vessel for up to 6 passengers.
+  name: NT-Salv-"Обушок" №5
+  description: Утилизаторский шаттл
   price: 15000
   category: Small
-  group: Specialist
+  group: Salvage
   shuttlePath: Maps/SpaceCats/Shuttles/SalvageShellMrIzo.yml
 
 - type: vessel
   id: SalvageSantaMaria
-  name: Private Transport Shuttle
-  description: A private transport vessel for up to 6 passengers.
+  name: AI-Carg-"Санта-Мария" №1492
+  description: Утилизаторский шаттл
   price: 25000
   category: Small
-  group: Specialist
+  group: Salvage
   shuttlePath: Maps/SpaceCats/Shuttles/SalvageSantaMariaMrIzo.yml
 
 - type: vessel
-  id: SalvageTrawl
-  name: Private Transport Shuttle
-  description: A private transport vessel for up to 6 passengers.
-  price: 10000
+  id: SalvageMarkShader
+  name: IA-Salv-"МаркШейдер" №1
+  description: Утилизаторский шаттл
+  price: 40000
   category: Small
-  group: Specialist
-  shuttlePath: Maps/SpaceCats/Shuttles/SalvageTrawlMrIzo.yml
+  group: Salvage
+  shuttlePath: Maps/SpaceCats/Shuttles/SalvageMarkShaderMrIzo.yml
