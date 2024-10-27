@@ -347,18 +347,11 @@ public sealed class DamageVisualsSystem : VisualizerSystem<DamageVisualsComponen
         // If this was passed into the component, we update
         // the data to ensure that the current disabled
         // bool matches.
-        if (AppearanceSystem.TryGetData<bool>(uid, DamageVisualizerKeys.Disabled, out var disabledStatus,
-                args.Component))
-        {
-            damageVisComp.Thresholds = new List<FixedPoint2>() { 0 };
-            HandleDamage(uid, args.Component, damageVisComp);
+        if (AppearanceSystem.TryGetData<bool>(uid, DamageVisualizerKeys.Disabled, out var disabledStatus, args.Component))
             damageVisComp.Disabled = disabledStatus;
-        }
 
         if (damageVisComp.Disabled)
-        {
             return;
-        }
 
         if (!TryComp(uid, out SpriteComponent? spriteComponent))
             return;
@@ -392,7 +385,6 @@ public sealed class DamageVisualsSystem : VisualizerSystem<DamageVisualsComponen
     }
     private void HandleDamage(EntityUid uid, AppearanceComponent component, DamageVisualsComponent damageVisComp, SpriteComponent spriteComponent, DamageableComponent damageComponent, BodyPart? bodyPart = null)
     {
-
         if (AppearanceSystem.TryGetData<bool>(uid, DamageVisualizerKeys.ForceUpdate, out var update, component)
             && update)
         {
@@ -523,12 +515,12 @@ public sealed class DamageVisualsSystem : VisualizerSystem<DamageVisualsComponen
                 {
                     UpdateTargetLayer(spriteComponent, damageVisComp, layer, threshold);
                 }
-
             }
             else
             {
                 UpdateTargetLayer(spriteComponent, damageVisComp, damageVisComp.TargetLayerMapKeys[bodyPart] , threshold);
             }
+
         }
         else
         {
