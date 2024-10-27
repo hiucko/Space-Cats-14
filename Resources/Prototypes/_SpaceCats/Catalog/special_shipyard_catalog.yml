@@ -1,0 +1,44 @@
+- type: vessel
+  id: SalvageHearse
+  name: Private Transport Shuttle
+  description: A private transport vessel for up to 6 passengers.
+  price: 10000
+  category: Small
+  group: Specialist
+  shuttlePath: Maps/SpaceCats/Shuttles/SalvageHearseMrIzo.yml
+
+- type: vessel
+  id: SalvageMarkShader
+  name: Private Transport Shuttle
+  description: A private transport vessel for up to 6 passengers.
+  price: 40000
+  category: Small
+  group: Specialist
+  shuttlePath: Maps/SpaceCats/Shuttles/SalvageMarkShaderMrIzo.yml
+
+- type: vessel
+  id: SalvageShell
+  name: Private Transport Shuttle
+  description: A private transport vessel for up to 6 passengers.
+  price: 15000
+  category: Small
+  group: Specialist
+  shuttlePath: Maps/SpaceCats/Shuttles/SalvageShellMrIzo.yml
+
+- type: vessel
+  id: SalvageSantaMaria
+  name: Private Transport Shuttle
+  description: A private transport vessel for up to 6 passengers.
+  price: 25000
+  category: Small
+  group: Specialist
+  shuttlePath: Maps/SpaceCats/Shuttles/SalvageSantaMariaMrIzo.yml
+
+- type: vessel
+  id: SalvageTrawl
+  name: Private Transport Shuttle
+  description: A private transport vessel for up to 6 passengers.
+  price: 10000
+  category: Small
+  group: Specialist
+  shuttlePath: Maps/SpaceCats/Shuttles/SalvageTrawlMrIzo.yml
