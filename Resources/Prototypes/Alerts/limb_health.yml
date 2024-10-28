@@ -16,7 +16,7 @@
   id: LimbHealth
   icons:
   - sprite: /Textures/Interface/Alerts/limb_damage.rsi
-    state: chest0
+    state: Torso7
   alertViewEntity: AlertLimbDamageSpriteView
   name: alerts-limbs-name
   description: alerts-limbs-desc
