@@ -1,8 +1,8 @@
 - type: entity
   id: ComputerShipyardTSpecialist
   parent: ComputerShipyard
-  name: консоль заказа утилизации
-  description: Консоль заказов шаттлов
+  name: консоль верфи снабжения
+  description: Консоль с возможностью заказа шаттлов. Если бы вы знали о их состоянии...
   components:
   - type: Fixtures
     fixtures:
