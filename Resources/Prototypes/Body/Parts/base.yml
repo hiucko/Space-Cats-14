@@ -28,6 +28,7 @@
   components:
   - type: BodyPart
     partType: Torso
+    overallDamageScale: 1
 
 - type: entity
   id: BaseHead
@@ -38,6 +39,7 @@
   - type: BodyPart
     partType: Head
     vital: true
+    overallDamageScale: 1.2
   - type: Input
     context: "ghost"
   - type: Tag
@@ -97,6 +99,7 @@
   - type: BodyPart
     partType: Leg
     symmetry: Left
+    overallDamageScale: 0.5
   - type: MovementBodyPart
     overallDamageScale: 0.8
 
@@ -109,6 +112,7 @@
   - type: BodyPart
     partType: Leg
     symmetry: Right
+    overallDamageScale: 0.5
   - type: MovementBodyPart
     overallDamageScale: 0.8
 
