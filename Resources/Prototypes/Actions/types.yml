@@ -326,12 +326,3 @@
       itemIconStyle: NoItem
       useDelay: 1 # emote spam
       event: !type:ToggleActionEvent
-
-- type: entity
-  id: ActionDamageSelector
-  name: Limb Selector
-  description: Change where you aim.
-  components:
-  - type: InstantAction
-    icon: { sprite: Interface/Actions/zone_sel.rsi , state: torso }
-    event: !type:DamageSelectorActionEvent

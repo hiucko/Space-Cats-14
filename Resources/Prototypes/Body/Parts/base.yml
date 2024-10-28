@@ -28,7 +28,6 @@
   components:
   - type: BodyPart
     partType: Torso
-    overallDamageScale: 1
 
 - type: entity
   id: BaseHead
@@ -39,7 +38,6 @@
   - type: BodyPart
     partType: Head
     vital: true
-    overallDamageScale: 1.2
   - type: Input
     context: "ghost"
   - type: Tag
@@ -55,7 +53,6 @@
   - type: BodyPart
     partType: Arm
     symmetry: Left
-    overallDamageScale: 0.8
 
 - type: entity
   id: BaseRightArm
@@ -66,7 +63,6 @@
   - type: BodyPart
     partType: Arm
     symmetry: Right
-    overallDamageScale: 0.8
 
 - type: entity
   id: BaseLeftHand
@@ -77,7 +73,6 @@
   - type: BodyPart
     partType: Hand
     symmetry: Left
-    overallDamageScale: 0.5
 
 - type: entity
   id: BaseRightHand
@@ -88,7 +83,6 @@
   - type: BodyPart
     partType: Hand
     symmetry: Right
-    overallDamageScale: 0.5
 
 - type: entity
   id: BaseLeftLeg
@@ -99,7 +93,6 @@
   - type: BodyPart
     partType: Leg
     symmetry: Left
-    overallDamageScale: 0.5
   - type: MovementBodyPart
 
 - type: entity
@@ -111,7 +104,6 @@
   - type: BodyPart
     partType: Leg
     symmetry: Right
-    overallDamageScale: 0.5
   - type: MovementBodyPart
 
 - type: entity
@@ -123,7 +115,6 @@
   - type: BodyPart
     partType: Foot
     symmetry: Left
-    overallDamageScale: 0.5
 
 - type: entity
   id: BaseRightFoot
@@ -134,4 +125,3 @@
   - type: BodyPart
     partType: Foot
     symmetry: Right
-    overallDamageScale: 0.5

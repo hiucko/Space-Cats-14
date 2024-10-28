@@ -7,7 +7,6 @@
     - alertType: ChangelingBiomass
     - category: Health
     - category: Stamina
-    - alertType: LimbHealth
     - alertType: ChangelingChemicals
     - category: ShadowkinPower
     - alertType: SuitPower
