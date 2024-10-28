@@ -528,7 +528,6 @@
     - MonkeyWearable
     - Hardsuit
     - WhitelistChameleon
-  - type: DNALocker
 
 # Syndicate Medic Hardsuit
 - type: entity
@@ -547,7 +546,6 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
-  - type: DNALocker
 
 #Syndicate Elite Hardsuit
 - type: entity
@@ -582,7 +580,6 @@
         Stun: 0.2
   - type: Item
     size: Huge
-  - type: DNALocker
   - type: ClothingSpeedModifier
     walkModifier: 1.0
     sprintModifier: 1.0  #backmen-speedoznik
@@ -622,7 +619,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSyndieCommander
-  - type: DNALocker
+
 
 #Cybersun Juggernaut Hardsuit
 - type: entity
