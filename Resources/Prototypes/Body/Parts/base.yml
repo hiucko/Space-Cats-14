@@ -101,7 +101,6 @@
     symmetry: Left
     overallDamageScale: 0.5
   - type: MovementBodyPart
-    overallDamageScale: 0.8
 
 - type: entity
   id: BaseRightLeg
@@ -114,7 +113,6 @@
     symmetry: Right
     overallDamageScale: 0.5
   - type: MovementBodyPart
-    overallDamageScale: 0.8
 
 - type: entity
   id: BaseLeftFoot
