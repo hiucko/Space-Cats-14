@@ -1,4 +1,3 @@
-using Content.Shared.Alert;
 using Content.Shared.Body.Prototypes;
 using Content.Shared.Body.Systems;
 using Robust.Shared.Audio;
@@ -42,7 +41,4 @@ public sealed partial class BodyComponent : Component
     [ViewVariables]
     [DataField, AutoNetworkedField]
     public HashSet<EntityUid> LegEntities = new();
-
-    [DataField]
-    public ProtoId<AlertPrototype> Alert = "LimbHealth";
 }

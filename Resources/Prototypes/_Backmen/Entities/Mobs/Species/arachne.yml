@@ -134,13 +134,13 @@
   - type: BloodSucker
     webRequired: true
   - type: Arachne
-#  - type: DamageVisuals
-#    thresholds: [ 10, 20, 30, 50, 70, 100 ]
-#    targetLayers:
-#      - "enum.HumanoidVisualLayers.Chest"
-#      - "enum.HumanoidVisualLayers.Head"
-#      - "enum.HumanoidVisualLayers.LArm"
-#      - "enum.HumanoidVisualLayers.RArm"
+  - type: DamageVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    targetLayers:
+      - "enum.HumanoidVisualLayers.Chest"
+      - "enum.HumanoidVisualLayers.Head"
+      - "enum.HumanoidVisualLayers.LArm"
+      - "enum.HumanoidVisualLayers.RArm"
   - type: MovedByPressure
     pressureResistance: 4
   - type: Barotrauma

@@ -32,8 +32,6 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
-      enum.DamageSelectorUiKey.Key:
-        type: DamageSelectorBoundUserInterface
       enum.StoreUiKey.Key:
         type: StoreBoundUserInterface
   # to prevent bag open/honk spam
