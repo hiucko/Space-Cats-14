@@ -44,6 +44,12 @@ public sealed partial class BodyPartComponent : Component
     public Dictionary<string, OrganSlot> Organs = new();
 
     /// <summary>
+    /// Percentage of how how much this contributes to the overall bodies total damage
+    /// </summary>
+    [DataField]
+    public float OverallDamageScale = 1f;
+
+    /// <summary>
     /// These are only for VV/Debug do not use these for gameplay/systems
     /// </summary>
     [ViewVariables]
