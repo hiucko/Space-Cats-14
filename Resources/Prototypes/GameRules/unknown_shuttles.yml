@@ -229,4 +229,3 @@
     startAnnouncement: station-event-unknown-shuttle-incoming #!!
   - type: LoadMapRule
     preloadedGrid: Spacebus
-
