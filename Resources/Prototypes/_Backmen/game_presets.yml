@@ -301,7 +301,7 @@
   rules:
   - CalmStationEventScheduler
   - WageScheduler #backmen: currency
-  - CalmMeteorSwarmScheduler
+#  - CalmMeteorSwarmScheduler
   - BasicRoundstartVariation
 
 - type: gamePreset
