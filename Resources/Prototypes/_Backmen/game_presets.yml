@@ -290,6 +290,19 @@
   # - MeteorSwarmMildScheduler
   # - MeteorSwarmScheduler
   - RampingStationEventScheduler
+#  - SpaceTrafficControlEventScheduler
+#  - SpaceTrafficControlFriendlyEventScheduler
+
+- type: gamePreset
+  id: Calm
+  name: calm-title
+  showInVote: true
+  description: calm-description
+  rules:
+  - CalmStationEventScheduler
+  - WageScheduler #backmen: currency
+#  - CalmMeteorSwarmScheduler
+  - BasicRoundstartVariation
 
 - type: gamePreset
   id: BabelTower
@@ -302,6 +315,6 @@
     - BasicStationEventScheduler
     - WageScheduler
     - BasicRoundstartVariation
-   # - SpaceTrafficControlEventScheduler
-   # - SpaceTrafficControlFriendlyEventScheduler
+#    - SpaceTrafficControlEventScheduler
+#    - SpaceTrafficControlFriendlyEventScheduler
     - ExtendedThief

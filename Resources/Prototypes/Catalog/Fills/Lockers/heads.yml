@@ -243,6 +243,7 @@
     - id: ClothingHeadCage # backmen
     - id: PrinterDocFlatpack # Corvax-Printer
     - id: FlatpackMetempsychoticMachine # backmen
+    - id: MedicalBiofabMachineBoard # backmen
     - id: MedTekCartridge
 #    - id: genguns # space cats
 

@@ -85,13 +85,8 @@
 #          - type: Gravity
 #            enabled: true
 #            inherent: true
-#         protos:
+#          protos:
 #          - VGRoid
-#        # Corvax-Mining-Start
-#        mining: !type:GridSpawnGroup
-#          paths:
-#          - /Maps/Shuttles/corvax_mining.yml
-#        # Corvax-Mining-End
 
 - type: entity
   id: BaseStationCentcomm
