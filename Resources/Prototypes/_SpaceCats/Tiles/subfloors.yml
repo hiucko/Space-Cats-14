@@ -33,3 +33,57 @@
     collection: FootstepPlating
   friction: 0.3
   heatCapacity: 10000
+
+- type: tile
+  id: LatticeDiagonal
+  name: диагональная решётка
+  sprite: /Textures/_SpaceCats/Tiles/latticediagonal.png
+  baseTurf: Space
+  isSubfloor: true
+  deconstructTools: [ Cutting ]
+  weather: true
+  footstepSounds:
+    collection: FootstepPlating
+  friction: 0.3
+  isSpace: true
+  itemDrop: PartRodMetal1
+  heatCapacity: 10000
+
+- type: tile
+  id: PlatingDiagonal
+  name: диагональное покрытие
+  sprite: /Textures/_SpaceCats/Tiles/platingdiagonal.png
+  baseTurf: LatticeDiagonal
+  isSubfloor: true
+  deconstructTools: [ AdvancedPrying ]
+  footstepSounds:
+    collection: FootstepPlating
+  friction: 0.3
+  heatCapacity: 10000
+
+  - type: tile
+  id: LatticeTriangle
+  name: треугольная решётка
+  sprite: /Textures/_SpaceCats/Tiles/latticetriangle.png
+  baseTurf: Space
+  isSubfloor: true
+  deconstructTools: [ Cutting ]
+  weather: true
+  footstepSounds:
+    collection: FootstepPlating
+  friction: 0.3
+  isSpace: true
+  itemDrop: PartRodMetal1
+  heatCapacity: 10000
+
+  - type: tile
+  id: PlatingTriangle
+  name: треугольное покрытие
+  sprite: /Textures/_SpaceCats/Tiles/platingtriangle.png
+  baseTurf: LatticeTriangle
+  isSubfloor: true
+  deconstructTools: [ AdvancedPrying ]
+  footstepSounds:
+    collection: FootstepPlating
+  friction: 0.3
+  heatCapacity: 10000
