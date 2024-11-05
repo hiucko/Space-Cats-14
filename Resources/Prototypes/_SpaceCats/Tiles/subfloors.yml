@@ -61,7 +61,7 @@
   friction: 0.3
   heatCapacity: 10000
 
-  - type: tile
+- type: tile
   id: LatticeTriangle
   name: треугольная решётка
   sprite: /Textures/_SpaceCats/Tiles/latticetriangle.png
@@ -76,7 +76,7 @@
   itemDrop: PartRodMetal1
   heatCapacity: 10000
 
-  - type: tile
+- type: tile
   id: PlatingTriangle
   name: треугольное покрытие
   sprite: /Textures/_SpaceCats/Tiles/platingtriangle.png
@@ -88,7 +88,7 @@
   friction: 0.3
   heatCapacity: 10000
 
-  - type: tile
+- type: tile
   id: LatticePyramid
   name: треугольная решётка
   sprite: /Textures/_SpaceCats/Tiles/latticepyramid.png
