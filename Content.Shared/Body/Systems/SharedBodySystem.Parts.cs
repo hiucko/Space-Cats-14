@@ -172,25 +172,14 @@ public partial class SharedBodySystem
     protected virtual void DropPart(Entity<BodyPartComponent> partEnt)
     {
         ChangeSlotState(partEnt, true);
-        // I don't know if this can cause issues, since any part that's being detached HAS to have a Body.
-        // though I really just want the compiler to shut the fuck up.
-        var body = partEnt.Comp.Body.GetValueOrDefault();
+
         // We then detach the part, which will kickstart EntRemovedFromContainer events.
         if (TryComp(partEnt, out TransformComponent? transform) && _gameTiming.IsFirstTimePredicted)
         {
-            var enableEvent = new BodyPartEnableChangedEvent(false);
-            RaiseLocalEvent(partEnt, ref enableEvent);
-
-            if (TryComp(body, out HumanoidAppearanceComponent? bodyAppearance)
-                && !HasComp<BodyPartAppearanceComponent>(partEnt)
-                && !TerminatingOrDeleted(body)
-                && !TerminatingOrDeleted(partEnt))
-                EnsureComp<BodyPartAppearanceComponent>(partEnt);
-
+            var ev = new BodyPartEnableChangedEvent(false);
+            RaiseLocalEvent(partEnt, ref ev);
             SharedTransform.AttachToGridOrMap(partEnt, transform);
             _randomHelper.RandomOffset(partEnt, 0.5f);
-            var droppedEvent = new BodyPartDroppedEvent(partEnt);
-            RaiseLocalEvent(body, ref droppedEvent);
         }
 
     }
@@ -639,10 +628,14 @@ public partial class SharedBodySystem
 
         // start-backmen: surgery
         if (TryComp(part.Body, out HumanoidAppearanceComponent? bodyAppearance)
-            && !HasComp<BodyPartAppearanceComponent>(partId)
-            && !TerminatingOrDeleted(parentPartId)
-            && !TerminatingOrDeleted(partId)) // Saw some exceptions involving these due to the spawn menu.
-            EnsureComp<BodyPartAppearanceComponent>(partId);
+            && !HasComp<BodyPartAppearanceComponent>(partId))
+        {
+            var appearance = AddComp<BodyPartAppearanceComponent>(partId);
+            appearance.OriginalBody = part.Body;
+            appearance.Color = bodyAppearance.SkinColor;
+            UpdateAppearance(partId, appearance);
+        }
+        // end-backmen: surgery
 
         return Containers.Insert(partId, container);
     }
