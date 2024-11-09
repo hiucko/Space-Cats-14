@@ -12,6 +12,7 @@ using Robust.Shared.Utility;
 using Content.Shared.Backmen.Mood;
 using Robust.Shared.Configuration;
 using Content.Shared.Backmen.CCVar;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Content.Shared.Nutrition.EntitySystems;
 
