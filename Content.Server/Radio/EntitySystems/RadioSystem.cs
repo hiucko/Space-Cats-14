@@ -136,10 +136,12 @@ public sealed class RadioSystem : EntitySystem
 			var color = idCard.Comp.JobColor;
 			var job = idCard.Comp.JobTitle;
 
-			if (!string.IsNullOrEmpty(job))
+			if (job is not null)
 			{
+			    var jobTitle = job[0].ToString().ToUpper() + job.Substring(1);
+
 			    name = Loc.GetString("chat-radio-format-name-by-title", 
-			        ("jobTitle", job[0].ToString().ToUpper() + job.Substring(1)), 
+			        ("jobTitle", jobTitle), 
 			        ("name", name));
 			}
 
