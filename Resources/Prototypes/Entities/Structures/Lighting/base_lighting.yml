@@ -35,7 +35,7 @@
   - type: PointLight
     color: "#FFE4CE" # 5000K color temp
     energy: 0.8
-    radius: 8
+    radius: 10
     softness: 1
     offset: "0, -0.5"
   - type: Damageable
