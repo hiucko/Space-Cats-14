@@ -19,6 +19,7 @@ using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Random;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Roles;
+using Content.Shared.Roles.Jobs;
 using Content.Shared.Station;
 using JetBrains.Annotations;
 using Robust.Shared.Configuration;
