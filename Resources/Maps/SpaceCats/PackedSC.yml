@@ -2494,6 +2494,11 @@ entities:
             2784: -13,16
             2787: -7,16
         - node:
+            color: '#FFA500FF'
+            id: BrickTileWhiteEndN
+          decals:
+            2862: 18,16
+        - node:
             cleanable: True
             color: '#A4610696'
             id: BrickTileWhiteEndS
@@ -7402,6 +7407,16 @@ entities:
       - 389
       - 8307
       - 8391
+  - uid: 14304
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 37.5,29.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 8288
+      - 8370
 - proto: AirCanister
   entities:
   - uid: 62
@@ -42711,7 +42726,7 @@ entities:
       pos: 25.5,28.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -14978.039
+      secondsUntilStateChange: -15131.124
       state: Closing
   - uid: 6514
     components:
@@ -55657,6 +55672,9 @@ entities:
     - type: Transform
       pos: 40.5,32.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 14304
     - type: AtmosPipeColor
       color: '#0335FCFF'
   - uid: 8289
@@ -56295,6 +56313,9 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 40.5,33.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 14304
   - uid: 8371
     components:
     - type: Transform
@@ -61531,7 +61552,7 @@ entities:
     - type: Transform
       pos: 41.5,26.5
       parent: 2
-- proto: GunSafeSubMachineGunDrozd
+- proto: GunSafeSubMachineGunVector
   entities:
   - uid: 9386
     components:
@@ -66004,6 +66025,11 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 91.5,-16.5
+      parent: 2
+  - uid: 14014
+    components:
+    - type: Transform
+      pos: 18.5,16.5
       parent: 2
 - proto: PoweredSmallLight
   entities:
@@ -72559,6 +72585,13 @@ entities:
     components:
     - type: Transform
       pos: 120.5,-17.5
+      parent: 2
+- proto: SpaceCatsVendingMachineSponsor
+  entities:
+  - uid: 14305
+    components:
+    - type: Transform
+      pos: 18.5,16.5
       parent: 2
 - proto: SpaceVillainArcade
   entities:
@@ -88435,11 +88468,6 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-31.5
-      parent: 2
-  - uid: 14014
-    components:
-    - type: Transform
-      pos: 18.5,16.5
       parent: 2
 - proto: WardrobeYellowFilled
   entities:

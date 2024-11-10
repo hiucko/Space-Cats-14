@@ -43976,11 +43976,6 @@ entities:
       parent: 2
 - proto: Bed
   entities:
-  - uid: 400
-    components:
-    - type: Transform
-      pos: 4.5,5.5
-      parent: 2
   - uid: 401
     components:
     - type: Transform
@@ -67335,6 +67330,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: 20.5,26.5
       parent: 2
+  - uid: 4677
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,5.5
+      parent: 2
 - proto: ChairCursed
   entities:
   - uid: 4411
@@ -69065,23 +69066,6 @@ entities:
           ent: null
 - proto: ClosetMaintenance
   entities:
-  - uid: 4676
-    components:
-    - type: Transform
-      pos: 2.5,4.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4678
-          - 4677
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
   - uid: 4679
     components:
     - type: Transform
@@ -70680,11 +70664,6 @@ entities:
     - type: InsideEntityStorage
 - proto: ClothingShoeSlippersDuck
   entities:
-  - uid: 4890
-    components:
-    - type: Transform
-      pos: 2.4658527,5.7852716
-      parent: 2
   - uid: 4891
     components:
     - type: Transform
@@ -70706,13 +70685,6 @@ entities:
       parent: 17245
 - proto: ClothingShoesTourist
   entities:
-  - uid: 4677
-    components:
-    - type: Transform
-      parent: 4676
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
   - uid: 4680
     components:
     - type: Transform
@@ -70933,13 +70905,6 @@ entities:
     - type: InsideEntityStorage
 - proto: ClothingUniformJumpsuitHawaiBlack
   entities:
-  - uid: 4678
-    components:
-    - type: Transform
-      parent: 4676
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
   - uid: 4896
     components:
     - type: Transform
@@ -72955,7 +72920,7 @@ entities:
       pos: 29.5,23.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -32198.377
+      secondsUntilStateChange: -32395.959
       state: Opening
 - proto: CurtainsBlueOpen
   entities:
@@ -73042,16 +73007,10 @@ entities:
       pos: -5.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -534.5551
+      secondsUntilStateChange: -732.13806
       state: Closing
 - proto: CurtainsRed
   entities:
-  - uid: 5156
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,3.5
-      parent: 2
   - uid: 5157
     components:
     - type: Transform
@@ -73124,12 +73083,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 6.5,3.5
       parent: 2
-  - uid: 5170
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,3.5
-      parent: 2
   - uid: 5171
     components:
     - type: Transform
@@ -73163,7 +73116,7 @@ entities:
       pos: 89.5,16.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -149462.1
+      secondsUntilStateChange: -149659.67
       state: Closing
   - uid: 5177
     components:
@@ -78883,11 +78836,6 @@ entities:
     components:
     - type: Transform
       pos: 10.5,5.5
-      parent: 2
-  - uid: 6071
-    components:
-    - type: Transform
-      pos: 2.5,5.5
       parent: 2
   - uid: 6072
     components:
@@ -114770,7 +114718,7 @@ entities:
         - 0
         - 0
         - 0
-- proto: GunSafeSubMachineGunVector
+- proto: GunSafeSubMachineGunDrozd
   entities:
   - uid: 11663
     components:
@@ -118338,6 +118286,13 @@ entities:
       parent: 2
 - proto: Paper
   entities:
+  - uid: 400
+    components:
+    - type: Transform
+      pos: 3.533214,5.484338
+      parent: 2
+    - type: Paper
+      content: ЦК, ЦК...
   - uid: 12042
     components:
     - type: Transform
@@ -121056,6 +121011,13 @@ entities:
     - type: Transform
       pos: -5.5,-11.5
       parent: 17245
+- proto: PoweredlightOrange
+  entities:
+  - uid: 4678
+    components:
+    - type: Transform
+      pos: 3.5,5.5
+      parent: 2
 - proto: PoweredlightPink
   entities:
   - uid: 12433
@@ -121905,11 +121867,6 @@ entities:
     components:
     - type: Transform
       pos: 7.5,5.5
-      parent: 2
-  - uid: 12543
-    components:
-    - type: Transform
-      pos: 3.5,5.5
       parent: 2
   - uid: 12544
     components:
@@ -131235,6 +131192,13 @@ entities:
     - type: Transform
       pos: 85.5,31.5
       parent: 2
+- proto: SpaceCatsVendingMachineSponsor
+  entities:
+  - uid: 4890
+    components:
+    - type: Transform
+      pos: 2.5,5.5
+      parent: 2
 - proto: SpaceHeater
   entities:
   - uid: 14001
@@ -136998,6 +136962,12 @@ entities:
     - type: Transform
       pos: 37.5,21.5
       parent: 2
+  - uid: 4676
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 3.5,5.5
+      parent: 2
   - uid: 14887
     components:
     - type: Transform
@@ -137115,11 +137085,6 @@ entities:
     components:
     - type: Transform
       pos: 12.5,4.5
-      parent: 2
-  - uid: 14910
-    components:
-    - type: Transform
-      pos: 4.5,4.5
       parent: 2
   - uid: 14911
     components:
