@@ -136,19 +136,20 @@ public sealed class RadioSystem : EntitySystem
 			var color = idCard.Comp.JobColor;
 			var job = idCard.Comp.JobTitle;
 
-			if (job is not null)
+			if (job.HasValue)
 			{
-			    var jobTitle = job[0].ToString().ToUpper() + job.Substring(1);
-
+			    var jobTitle = job.Value.ToString();
+    
 			    name = Loc.GetString("chat-radio-format-name-by-title", 
-			        ("jobTitle", jobTitle), 
+			        ("jobTitle", jobTitle.Substring(0, 1).ToUpper() + jobTitle.Substring(1)),
 			        ("name", name));
 			}
-
-			name = Loc.GetString("chat-radio-format-name-by-color", 
-				("jobColor", color.ToHex()), 
-				("name", name));
-		}
+			else
+			{
+			    name = Loc.GetString("chat-radio-format-name-by-title", 
+			        ("jobTitle", "Unknown"), 
+			        ("name", name));
+			}
 
         SpeechVerbPrototype speech;
         if (evt.SpeechVerb != null && _prototype.TryIndex(evt.SpeechVerb, out var evntProto))
