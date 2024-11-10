@@ -1018,6 +1018,11 @@ entities:
           decals:
             931: 19,-15
         - node:
+            color: '#FFA500FF'
+            id: BrickTileWhiteBox
+          decals:
+            1996: -12,-25
+        - node:
             color: '#52B4E9FF'
             id: BrickTileWhiteCornerNe
           decals:
@@ -7048,7 +7053,7 @@ entities:
       pos: -17.5,32.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -20005.184
+      secondsUntilStateChange: -20196.81
       state: Opening
     - type: DeviceLinkSink
       invokeCounter: 2
@@ -58092,7 +58097,7 @@ entities:
     - type: Transform
       pos: 38.5,12.5
       parent: 2
-- proto: GunSafeSubMachineGunVector
+- proto: GunSafeSubMachineGunDrozd
   entities:
   - uid: 8581
     components:
@@ -62437,11 +62442,6 @@ entities:
     - type: Transform
       pos: 2.5,-26.5
       parent: 2
-  - uid: 9265
-    components:
-    - type: Transform
-      pos: -13.5,-24.5
-      parent: 2
   - uid: 9266
     components:
     - type: Transform
@@ -63932,6 +63932,11 @@ entities:
     components:
     - type: Transform
       pos: -46.5,-18.5
+      parent: 2
+  - uid: 13178
+    components:
+    - type: Transform
+      pos: -11.5,-24.5
       parent: 2
 - proto: PoweredSmallLight
   entities:
@@ -66082,11 +66087,6 @@ entities:
     - type: Transform
       pos: -3.5,12.5
       parent: 2
-  - uid: 9860
-    components:
-    - type: Transform
-      pos: -12.5,-24.5
-      parent: 2
   - uid: 9861
     components:
     - type: Transform
@@ -66114,6 +66114,16 @@ entities:
       parent: 2
 - proto: RandomVendingSnacks
   entities:
+  - uid: 9265
+    components:
+    - type: Transform
+      pos: -13.5,-24.5
+      parent: 2
+  - uid: 9860
+    components:
+    - type: Transform
+      pos: -12.5,-24.5
+      parent: 2
   - uid: 9866
     components:
     - type: Transform
@@ -66143,11 +66153,6 @@ entities:
     components:
     - type: Transform
       pos: 0.5,-7.5
-      parent: 2
-  - uid: 9872
-    components:
-    - type: Transform
-      pos: -11.5,-24.5
       parent: 2
   - uid: 9873
     components:
@@ -70621,6 +70626,13 @@ entities:
       parent: 2
     - type: Stack
       count: 2000
+- proto: SpaceCatsVendingMachineSponsor
+  entities:
+  - uid: 9872
+    components:
+    - type: Transform
+      pos: -11.5,-24.5
+      parent: 2
 - proto: SpaceVillainArcadeFilled
   entities:
   - uid: 10606
