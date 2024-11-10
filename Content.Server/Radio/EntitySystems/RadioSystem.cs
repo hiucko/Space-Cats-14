@@ -149,8 +149,9 @@ public sealed class RadioSystem : EntitySystem
 			    name = Loc.GetString("chat-radio-format-name-by-title", 
 			        ("jobTitle", "Unknown"), 
 			        ("name", name));
-			}
-
+		    }
+        }
+        
         SpeechVerbPrototype speech;
         if (evt.SpeechVerb != null && _prototype.TryIndex(evt.SpeechVerb, out var evntProto))
             speech = evntProto;
