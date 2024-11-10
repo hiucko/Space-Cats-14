@@ -129,7 +129,7 @@ public sealed class SlipperySystem : EntitySystem
 
         _stun.TryParalyze(other, TimeSpan.FromSeconds(component.ParalyzeTime), true);
 
-        RaiseLocalEvent(other, new MoodEffectEvent("MobSlipped")); // backmen: moodg
+        RaiseLocalEvent(other, new MoodEffectEvent("MobSlipped")); // backmen: mood
 
         // Preventing from playing the slip sound when you are already knocked down.
         if (playSound)
