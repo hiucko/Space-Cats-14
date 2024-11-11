@@ -7,7 +7,7 @@
   category: construction-category-tiles
   description: Construct multi-colored flooring to light up the dance floor.
   icon:
-    sprite: ADT/Structures/Floor/disco_floor.rsi
+    sprite: _SpaceCats/Structures/Floor/disco_floor.rsi
     state: off
   objectType: Structure
   placementMode: SnapgridCenter
