@@ -3,7 +3,7 @@
   parent: SignalButton
   name: big red button
   description: Press it... if you dare.
-  сategories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
   - type: Lock
