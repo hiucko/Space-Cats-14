@@ -91,7 +91,7 @@
   components:
   - type: Sprite
     drawdepth: SmallObjects
-    sprite: Structures/Specific/big_red_button.rsi
+    sprite: _SpaceCats/Structures/Specific/big_red_button.rsi
     layers:
     - state: emergency
     - state: locked
