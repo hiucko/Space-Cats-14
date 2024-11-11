@@ -63,7 +63,7 @@
       - Toggle
   - type: Construction
     graph: DiscoFloor
-    node: discoFloor
+    node: discoSquare
   - type: Appearance
   - type: PoweredLightVisuals
     blinkingSound:
