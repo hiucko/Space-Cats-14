@@ -14894,6 +14894,63 @@ entities:
           - 772
           - 773
           - 770
+- proto: BigRedButtonCommand
+  entities:
+  - uid: 801
+    components:
+    - type: Transform
+      pos: -0.5,79.5
+      parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        15343:
+        - Pressed: Toggle
+        802:
+        - Pressed: Toggle
+        800:
+        - Pressed: Toggle
+        803:
+        - Pressed: Toggle
+        798:
+        - Pressed: Toggle
+        799:
+        - Pressed: Toggle
+        797:
+        - Pressed: Toggle
+        796:
+        - Pressed: Toggle
+        794:
+        - Pressed: Toggle
+        795:
+        - Pressed: Toggle
+        792:
+        - Pressed: Toggle
+        793:
+        - Pressed: Toggle
+        791:
+        - Pressed: Toggle
+        789:
+        - Pressed: Toggle
+        790:
+        - Pressed: Toggle
+        788:
+        - Pressed: Toggle
+        787:
+        - Pressed: Toggle
+        19216:
+        - Pressed: Toggle
+        19215:
+        - Pressed: Toggle
+        19214:
+        - Pressed: Toggle
+        19213:
+        - Pressed: Toggle
+        13536:
+        - Pressed: Toggle
+        785:
+        - Pressed: Toggle
+        786:
+        - Pressed: Toggle
 - proto: BikeHorn
   entities:
   - uid: 661
@@ -14958,108 +15015,6 @@ entities:
     components:
     - type: Transform
       pos: -55.5,12.5
-      parent: 2
-- proto: BlastDoorBridgeOpen
-  entities:
-  - uid: 784
-    components:
-    - type: Transform
-      pos: -9.5,76.5
-      parent: 2
-  - uid: 785
-    components:
-    - type: Transform
-      pos: -9.5,77.5
-      parent: 2
-  - uid: 786
-    components:
-    - type: Transform
-      pos: -8.5,79.5
-      parent: 2
-  - uid: 787
-    components:
-    - type: Transform
-      pos: -8.5,80.5
-      parent: 2
-  - uid: 788
-    components:
-    - type: Transform
-      pos: -7.5,82.5
-      parent: 2
-  - uid: 789
-    components:
-    - type: Transform
-      pos: -6.5,83.5
-      parent: 2
-  - uid: 790
-    components:
-    - type: Transform
-      pos: -5.5,83.5
-      parent: 2
-  - uid: 791
-    components:
-    - type: Transform
-      pos: -3.5,84.5
-      parent: 2
-  - uid: 792
-    components:
-    - type: Transform
-      pos: -2.5,84.5
-      parent: 2
-  - uid: 793
-    components:
-    - type: Transform
-      pos: -1.5,84.5
-      parent: 2
-  - uid: 794
-    components:
-    - type: Transform
-      pos: 0.5,84.5
-      parent: 2
-  - uid: 795
-    components:
-    - type: Transform
-      pos: 1.5,84.5
-      parent: 2
-  - uid: 796
-    components:
-    - type: Transform
-      pos: 2.5,84.5
-      parent: 2
-  - uid: 797
-    components:
-    - type: Transform
-      pos: 5.5,83.5
-      parent: 2
-  - uid: 798
-    components:
-    - type: Transform
-      pos: 4.5,83.5
-      parent: 2
-  - uid: 799
-    components:
-    - type: Transform
-      pos: 6.5,82.5
-      parent: 2
-  - uid: 800
-    components:
-    - type: Transform
-      pos: 7.5,80.5
-      parent: 2
-  - uid: 801
-    components:
-    - type: Transform
-      pos: 0.5,72.5
-      parent: 2
-  - uid: 802
-    components:
-    - type: Transform
-      pos: -0.5,72.5
-      parent: 2
-  - uid: 803
-    components:
-    - type: Transform
-      pos: -1.5,72.5
       parent: 2
 - proto: BlastDoorExterior3Open
   entities:
@@ -15150,6 +15105,120 @@ entities:
       parent: 2
 - proto: BlastDoorOpen
   entities:
+  - uid: 784
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 3.5,69.5
+      parent: 2
+  - uid: 785
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,69.5
+      parent: 2
+  - uid: 786
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,69.5
+      parent: 2
+  - uid: 787
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 7.5,80.5
+      parent: 2
+  - uid: 788
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,82.5
+      parent: 2
+  - uid: 789
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 4.5,83.5
+      parent: 2
+  - uid: 790
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,83.5
+      parent: 2
+  - uid: 791
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 2.5,84.5
+      parent: 2
+  - uid: 792
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,84.5
+      parent: 2
+  - uid: 793
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,84.5
+      parent: 2
+  - uid: 794
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -2.5,84.5
+      parent: 2
+  - uid: 795
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,84.5
+      parent: 2
+  - uid: 796
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -3.5,84.5
+      parent: 2
+  - uid: 797
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -5.5,83.5
+      parent: 2
+  - uid: 798
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -7.5,82.5
+      parent: 2
+  - uid: 799
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -6.5,83.5
+      parent: 2
+  - uid: 800
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -8.5,79.5
+      parent: 2
+  - uid: 802
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -9.5,76.5
+      parent: 2
+  - uid: 803
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -8.5,80.5
+      parent: 2
   - uid: 821
     components:
     - type: Transform
@@ -15254,6 +15323,60 @@ entities:
     components:
     - type: Transform
       pos: 12.5,76.5
+      parent: 2
+  - uid: 13536
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 2.5,69.5
+      parent: 2
+  - uid: 15343
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -9.5,77.5
+      parent: 2
+  - uid: 19213
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,70.5
+      parent: 2
+  - uid: 19214
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,71.5
+      parent: 2
+  - uid: 19215
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,73.5
+      parent: 2
+  - uid: 19216
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,74.5
+      parent: 2
+  - uid: 19217
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 0.5,72.5
+      parent: 2
+  - uid: 19218
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,72.5
+      parent: 2
+  - uid: 19219
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,72.5
       parent: 2
 - proto: BlastDoorWindowsOpen
   entities:
@@ -63111,7 +63234,7 @@ entities:
       pos: 31.5,35.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -89606.75
+      secondsUntilStateChange: -90386.22
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 1086.7989152
@@ -64453,13 +64576,6 @@ entities:
     components:
     - type: Transform
       pos: -18.642494,40.7428
-      parent: 2
-- proto: FoodBoxDonut
-  entities:
-  - uid: 9415
-    components:
-    - type: Transform
-      pos: -4.45382,80.533676
       parent: 2
 - proto: FoodBoxNugget
   entities:
@@ -94505,10 +94621,10 @@ entities:
       parent: 2
 - proto: PaperBin10
   entities:
-  - uid: 13536
+  - uid: 9415
     components:
     - type: Transform
-      pos: -0.5,79.5
+      pos: -4.5,80.5
       parent: 2
   - uid: 13537
     components:
@@ -105459,21 +105575,6 @@ entities:
         782:
         - Pressed: Toggle
         783:
-        - Pressed: Toggle
-- proto: SignalButtonBridge
-  entities:
-  - uid: 15343
-    components:
-    - type: Transform
-      pos: -0.5,79.5
-      parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        801:
-        - Pressed: Toggle
-        802:
-        - Pressed: Toggle
-        803:
         - Pressed: Toggle
 - proto: SignalButtonDirectional
   entities:

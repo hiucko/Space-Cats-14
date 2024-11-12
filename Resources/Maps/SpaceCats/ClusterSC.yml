@@ -7048,7 +7048,7 @@ entities:
       pos: -17.5,32.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -20088.934
+      secondsUntilStateChange: -20348.717
       state: Opening
     - type: DeviceLinkSink
       invokeCounter: 2
@@ -9186,6 +9186,69 @@ entities:
       rot: 3.141592653589793 rad
       pos: 25.5,24.5
       parent: 2
+- proto: BigRedButtonCommand
+  entities:
+  - uid: 5778
+    components:
+    - type: Transform
+      pos: -0.5,31.5
+      parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        13181:
+        - Pressed: Toggle
+        13180:
+        - Pressed: Toggle
+        13179:
+        - Pressed: Toggle
+        13178:
+        - Pressed: Toggle
+        13177:
+        - Pressed: Toggle
+        13176:
+        - Pressed: Toggle
+        13170:
+        - Pressed: Toggle
+        13171:
+        - Pressed: Toggle
+        13175:
+        - Pressed: Toggle
+        13173:
+        - Pressed: Toggle
+        13168:
+        - Pressed: Toggle
+        13167:
+        - Pressed: Toggle
+        13166:
+        - Pressed: Toggle
+        13165:
+        - Pressed: Toggle
+        9127:
+        - Pressed: Toggle
+        13169:
+        - Pressed: Toggle
+        13172:
+        - Pressed: Toggle
+        13174:
+        - Pressed: Toggle
+        13186:
+        - Pressed: Toggle
+        13189:
+        - Pressed: Toggle
+        13187:
+        - Pressed: Toggle
+        13188:
+        - Pressed: Toggle
+        13184:
+        - Pressed: Toggle
+        13185:
+        - Pressed: Toggle
+        13183:
+        - Pressed: Toggle
+        13182:
+        - Pressed: Toggle
+        13190:
+        - Pressed: Toggle
 - proto: BlastDoor
   entities:
   - uid: 519
@@ -9291,6 +9354,168 @@ entities:
     components:
     - type: Transform
       pos: -42.5,27.5
+      parent: 2
+  - uid: 9127
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -0.5,33.5
+      parent: 2
+  - uid: 13165
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -1.5,33.5
+      parent: 2
+  - uid: 13166
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,33.5
+      parent: 2
+  - uid: 13167
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -3.5,33.5
+      parent: 2
+  - uid: 13168
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -4.5,33.5
+      parent: 2
+  - uid: 13169
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.5,33.5
+      parent: 2
+  - uid: 13170
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -6.5,31.5
+      parent: 2
+  - uid: 13171
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -6.5,28.5
+      parent: 2
+  - uid: 13172
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.5,32.5
+      parent: 2
+  - uid: 13173
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -4.5,32.5
+      parent: 2
+  - uid: 13174
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 1.5,32.5
+      parent: 2
+  - uid: 13175
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -5.5,32.5
+      parent: 2
+  - uid: 13176
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -7.5,32.5
+      parent: 2
+  - uid: 13177
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -8.5,32.5
+      parent: 2
+  - uid: 13178
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -9.5,32.5
+      parent: 2
+  - uid: 13179
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -10.5,32.5
+      parent: 2
+  - uid: 13180
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -11.5,32.5
+      parent: 2
+  - uid: 13181
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -13.5,32.5
+      parent: 2
+  - uid: 13182
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 1.5,18.5
+      parent: 2
+  - uid: 13183
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -0.5,18.5
+      parent: 2
+  - uid: 13184
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,18.5
+      parent: 2
+  - uid: 13185
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,18.5
+      parent: 2
+  - uid: 13186
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 3.5,20.5
+      parent: 2
+  - uid: 13187
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 3.5,17.5
+      parent: 2
+  - uid: 13188
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,17.5
+      parent: 2
+  - uid: 13189
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,20.5
+      parent: 2
+  - uid: 13190
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.5,18.5
       parent: 2
 - proto: BlockGameArcade
   entities:
@@ -38459,13 +38684,6 @@ entities:
     - type: Transform
       pos: 3.5,12.5
       parent: 2
-- proto: Flash
-  entities:
-  - uid: 5778
-    components:
-    - type: Transform
-      pos: -0.72998714,31.713612
-      parent: 2
 - proto: FlashlightLantern
   entities:
   - uid: 5779
@@ -58082,7 +58300,7 @@ entities:
     - type: Transform
       pos: 38.5,12.5
       parent: 2
-- proto: GunSafeSubMachineGunDrozd
+- proto: GunSafeSubMachineGunVector
   entities:
   - uid: 8582
     components:
@@ -61579,11 +61797,6 @@ entities:
     components:
     - type: Transform
       pos: 5.3845835,10.568368
-      parent: 2
-  - uid: 9127
-    components:
-    - type: Transform
-      pos: -0.33936208,31.760487
       parent: 2
   - uid: 9128
     components:

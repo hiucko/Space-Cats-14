@@ -11014,6 +11014,55 @@ entities:
     - type: Transform
       pos: 8.5,-34.5
       parent: 2
+- proto: BigRedButtonCommand
+  entities:
+  - uid: 9699
+    components:
+    - type: Transform
+      pos: 26.5,47.5
+      parent: 2
+    - type: Lock
+      locked: False
+    - type: DeviceLinkSource
+      linkedPorts:
+        14305:
+        - Pressed: Toggle
+        14306:
+        - Pressed: Toggle
+        14307:
+        - Pressed: Toggle
+        14308:
+        - Pressed: Toggle
+        14309:
+        - Pressed: Toggle
+        14310:
+        - Pressed: Toggle
+        14311:
+        - Pressed: Toggle
+        14312:
+        - Pressed: Toggle
+        14313:
+        - Pressed: Toggle
+        14315:
+        - Pressed: Toggle
+        14316:
+        - Pressed: Toggle
+        14322:
+        - Pressed: Toggle
+        14323:
+        - Pressed: Toggle
+        14321:
+        - Pressed: Toggle
+        14320:
+        - Pressed: Toggle
+        14314:
+        - Pressed: Toggle
+        14317:
+        - Pressed: Toggle
+        14318:
+        - Pressed: Toggle
+        14319:
+        - Pressed: Toggle
 - proto: BikeHorn
   entities:
   - uid: 635
@@ -11099,6 +11148,120 @@ entities:
     components:
     - type: Transform
       pos: 12.5,-27.5
+      parent: 2
+  - uid: 14305
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 22.5,49.5
+      parent: 2
+  - uid: 14306
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 23.5,49.5
+      parent: 2
+  - uid: 14307
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 24.5,49.5
+      parent: 2
+  - uid: 14308
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,49.5
+      parent: 2
+  - uid: 14309
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 26.5,49.5
+      parent: 2
+  - uid: 14310
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 27.5,49.5
+      parent: 2
+  - uid: 14311
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 28.5,49.5
+      parent: 2
+  - uid: 14312
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 29.5,49.5
+      parent: 2
+  - uid: 14313
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 30.5,49.5
+      parent: 2
+  - uid: 14314
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 21.5,38.5
+      parent: 2
+  - uid: 14315
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 31.5,49.5
+      parent: 2
+  - uid: 14316
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 32.5,49.5
+      parent: 2
+  - uid: 14317
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 22.5,38.5
+      parent: 2
+  - uid: 14318
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 23.5,38.5
+      parent: 2
+  - uid: 14319
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 24.5,38.5
+      parent: 2
+  - uid: 14320
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 27.5,38.5
+      parent: 2
+  - uid: 14321
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 27.5,43.5
+      parent: 2
+  - uid: 14322
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 36.5,46.5
+      parent: 2
+  - uid: 14323
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 36.5,45.5
       parent: 2
 - proto: BlockGameArcade
   entities:
@@ -42711,7 +42874,7 @@ entities:
       pos: 25.5,28.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -14994.497
+      secondsUntilStateChange: -15108.06
       state: Closing
   - uid: 6515
     components:
@@ -61531,7 +61694,7 @@ entities:
     - type: Transform
       pos: 41.5,26.5
       parent: 2
-- proto: GunSafeSubMachineGunVector
+- proto: GunSafeSubMachineGunDrozd
   entities:
   - uid: 9387
     components:
@@ -63476,11 +63639,6 @@ entities:
     components:
     - type: Transform
       pos: 23.509125,15.577751
-      parent: 2
-  - uid: 9699
-    components:
-    - type: Transform
-      pos: 26.514572,47.589886
       parent: 2
   - uid: 9700
     components:

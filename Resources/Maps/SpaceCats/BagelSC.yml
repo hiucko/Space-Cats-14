@@ -16682,6 +16682,55 @@ entities:
           occludes: True
           ents:
           - 939
+- proto: BigRedButtonCommand
+  entities:
+  - uid: 23996
+    components:
+    - type: Transform
+      pos: -0.5,2.5
+      parent: 2
+    - type: SignalSwitch
+      state: True
+    - type: DeviceLinkSource
+      linkedPorts:
+        11462:
+        - Pressed: Toggle
+        17036:
+        - Pressed: Toggle
+        19268:
+        - Pressed: Toggle
+        969:
+        - Pressed: Toggle
+        970:
+        - Pressed: Toggle
+        19260:
+        - Pressed: Toggle
+        972:
+        - Pressed: Toggle
+        971:
+        - Pressed: Toggle
+        965:
+        - Pressed: Toggle
+        966:
+        - Pressed: Toggle
+        25224:
+        - Pressed: Toggle
+        25225:
+        - Pressed: Toggle
+        25226:
+        - Pressed: Toggle
+        25227:
+        - Pressed: Toggle
+        25228:
+        - Pressed: Toggle
+        25230:
+        - Pressed: Toggle
+        25229:
+        - Pressed: Toggle
+        968:
+        - Pressed: Toggle
+        967:
+        - Pressed: Toggle
 - proto: BikeHorn
   entities:
   - uid: 940
@@ -16813,50 +16862,72 @@ entities:
     - type: Transform
       pos: 67.5,-0.5
       parent: 2
-- proto: BlastDoorBridgeOpen
+- proto: BlastDoorOpen
   entities:
   - uid: 965
     components:
     - type: Transform
-      pos: -0.5,-1.5
+      rot: 3.141592653589793 rad
+      pos: 1.5,4.5
       parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 966
     components:
     - type: Transform
-      pos: 1.5,-1.5
+      rot: 3.141592653589793 rad
+      pos: 2.5,4.5
       parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 967
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
       pos: 1.5,-8.5
       parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 968
     components:
     - type: Transform
+      rot: 3.141592653589793 rad
       pos: -0.5,-8.5
       parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 969
     components:
     - type: Transform
-      pos: 5.5,0.5
+      rot: 3.141592653589793 rad
+      pos: -3.5,4.5
       parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 970
     components:
     - type: Transform
-      pos: 5.5,1.5
+      rot: 3.141592653589793 rad
+      pos: -2.5,4.5
       parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 971
     components:
     - type: Transform
-      pos: -4.5,0.5
+      rot: 3.141592653589793 rad
+      pos: 0.5,4.5
       parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 972
     components:
     - type: Transform
-      pos: -4.5,1.5
+      rot: 3.141592653589793 rad
+      pos: -0.5,4.5
       parent: 2
-- proto: BlastDoorOpen
-  entities:
+    - type: DeviceLinkSink
+      invokeCounter: 1
   - uid: 973
     components:
     - type: Transform
@@ -16899,6 +16970,94 @@ entities:
       rot: 3.141592653589793 rad
       pos: -115.5,9.5
       parent: 2
+  - uid: 11462
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,0.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 17036
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,1.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 19260
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,4.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 19268
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -3.5,3.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 25224
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 3.5,4.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 25225
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 4.5,4.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 25226
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 4.5,3.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 25227
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,1.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 25228
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,0.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 25229
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,-1.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+  - uid: 25230
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,-1.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
 - proto: BlastDoorWindowsOpen
   entities:
   - uid: 980
@@ -75620,11 +75779,6 @@ entities:
     - type: Transform
       pos: -26.46309,-14.295396
       parent: 2
-  - uid: 11462
-    components:
-    - type: Transform
-      pos: -0.5039121,2.9835286
-      parent: 2
 - proto: FoodBurgerMcguffin
   entities:
   - uid: 11463
@@ -110095,7 +110249,7 @@ entities:
     - type: Transform
       pos: -28.5,0.5
       parent: 2
-- proto: GunSafeSubMachineGunVector
+- proto: GunSafeSubMachineGunDrozd
   entities:
   - uid: 16476
     components:
@@ -114574,11 +114728,6 @@ entities:
     components:
     - type: Transform
       pos: -10.48097,11.426869
-      parent: 2
-  - uid: 17036
-    components:
-    - type: Transform
-      pos: -0.465486,3.4514241
       parent: 2
   - uid: 17037
     components:
@@ -128214,22 +128363,6 @@ entities:
       linkedPorts:
         953:
         - Pressed: Toggle
-  - uid: 19252
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,-1.5
-      parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        965:
-        - Pressed: Toggle
-        966:
-        - Pressed: Toggle
-        967:
-        - Pressed: Toggle
-        968:
-        - Pressed: Toggle
   - uid: 19253
     components:
     - type: Transform
@@ -128325,21 +128458,6 @@ entities:
       linkedPorts:
         19127:
         - Pressed: Toggle
-  - uid: 19260
-    components:
-    - type: Transform
-      pos: -3.5,2.5
-      parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        972:
-        - Pressed: Toggle
-        971:
-        - Pressed: Toggle
-        970:
-        - Pressed: Toggle
-        969:
-        - Pressed: Toggle
   - uid: 19261
     components:
     - type: MetaData
@@ -128419,18 +128537,6 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         16594:
-        - Pressed: Toggle
-  - uid: 19268
-    components:
-    - type: MetaData
-      name: Janitorial Service Light
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 5.5,-0.5
-      parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        16598:
         - Pressed: Toggle
   - uid: 19269
     components:
@@ -155532,6 +155638,12 @@ entities:
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:
+  - uid: 19252
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -0.5,3.5
+      parent: 2
   - uid: 23991
     components:
     - type: Transform
@@ -155559,13 +155671,6 @@ entities:
     - type: Transform
       pos: -42.5,3.5
       parent: 2
-  - uid: 23996
-    components:
-    - type: Transform
-      pos: -0.5,2.5
-      parent: 2
-    - type: Physics
-      canCollide: False
   - uid: 25210
     components:
     - type: Transform
