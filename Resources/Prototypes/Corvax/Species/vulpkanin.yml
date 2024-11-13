@@ -2,7 +2,6 @@
   id: Vulpkanin
   name: species-name-vulpkanin
   roundStart: true
-#  sponsorOnly: true # Corvax-Sponsors
   sponsorOnly: false # Corvax-Sponsors   #cats
   prototype: MobVulpkanin
   sprites: MobVulpkaninSprites
@@ -46,7 +45,7 @@
       points: 0
       required: false
     Tail:
-      points: 1
+      points: 2 #cats
       required: true
       defaultMarkings: [ FoxTail ]
     Snout:
