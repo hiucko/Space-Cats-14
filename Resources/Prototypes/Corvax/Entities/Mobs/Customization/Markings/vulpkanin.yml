@@ -67,7 +67,7 @@
   sprites:
     - sprite: Corvax/Mobs/Customization/vulpkanin.rsi
       state: tail_fox_waggin
-    - sprite: Corvax/Mobs/Customization/vulpkanin.rsi 
+    - sprite: Corvax/Mobs/Customization/vulpkanin.rsi
       state: tail_fox_inner_waggin
 
 - type: marking
